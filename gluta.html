@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1K4S938EK4');
+</script>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    window.onload = function() {
+      const weightedLinks = [
+        { url: "https://www.amazon.in/dp/B0DVC5KD7W", weight: 60 },
+        { url: "https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA", weight: 40 }
+      ];
+
+      function getWeightedRandomLink(links) {
+        const totalWeight = links.reduce((sum, link) => sum + link.weight, 0);
+        const randomNum = Math.random() * totalWeight;
+        let sum = 0;
+        for (const link of links) {
+          sum += link.weight;
+          if (randomNum <= sum) return link.url;
+        }
+      }
+
+      const targetUrl = getWeightedRandomLink(weightedLinks);
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 1000); // redirect after 1 seconds
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecting you shortly...</p>
+</body>
+</html>
