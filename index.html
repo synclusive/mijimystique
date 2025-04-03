@@ -12,11 +12,56 @@
       display: block;
     }
   </style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const productLinks = {
+      retinol: [
+        { url: 'https://www.amazon.in/dp/B0DVC7QM1L', weight: 0.7 },
+        { url: 'https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU', weight: 0.3 }
+      ],
+      glutathione: [
+        { url: 'https://www.amazon.in/dp/B0DVC5KD7W', weight: 0.6 },
+        { url: 'https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA', weight: 0.4 }
+      ],
+      'vitamin-c': [
+        { url: 'https://www.amazon.in/dp/B0DVC91MN3', weight: 0.5 },
+        { url: 'https://www.flipkart.com/miji-mystique-advanced-vitamin-c-20/p/itmddd9b16065fa0?pid=KMTH7JUMKS4RQTGW', weight: 0.5 }
+      ],
+      ahp8: [
+        { url: 'https://www.amazon.in/dp/B0DVC5QRDK', weight: 0.8 },
+        { url: 'https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S', weight: 0.2 }
+      ]
+    };
+
+    function selectLink(links) {
+      const totalWeight = links.reduce((sum, link) => sum + link.weight, 0);
+      let randomNum = Math.random() * totalWeight;
+      for (let link of links) {
+        if (randomNum < link.weight) {
+          return link.url;
+        }
+        randomNum -= link.weight;
+      }
+    }
+
+    document.querySelectorAll('.random-link').forEach(function(button) {
+      const product = button.closest('div').previousElementSibling?.previousElementSibling?.alt.toLowerCase().split(' ')[0] || '';
+      const links = productLinks[product];
+      if (links) {
+        const selectedUrl = selectLink(links);
+        button.addEventListener('click', function(event) {
+          event.preventDefault();
+          window.open(selectedUrl, '_blank');
+        });
+      }
+    });
+  });
+</script>
 </head>
 <body class="bg-white text-gray-800">
   <header class="bg-gray-900 text-white p-4 flex items-center justify-center gap-4">
     <img src="logo.png" alt="Miji Mystique Logo" class="w-10 h-10 rounded-full">
-    <h1 class="text-2xl font-bold">Miji Mystique</h1>
+    <h1 class="text-2xl font-bold">Miji Mystique – Product Collection</h1>
   </header>
 
   <section class="p-4 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
@@ -37,8 +82,8 @@
         <li>Enhances Skin Firmness</li>
       </ul>
       <div class="text-center">
-        <a href="#" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-3 px-6 rounded">
-          Shop Now
+        <a href="#" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto random-link">
+          View Product
         </a>
       </div>
     </div>
@@ -60,8 +105,8 @@
         <li>Daily-use brightening formula</li>
       </ul>
       <div class="text-center">
-        <a href="#" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-3 px-6 rounded">
-          Shop Now
+        <a href="#" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto random-link">
+          View Product
         </a>
       </div>
     </div>
@@ -83,8 +128,8 @@
         <li>Daily energizing formula</li>
       </ul>
       <div class="text-center">
-        <a href="#" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-3 px-6 rounded">
-          Shop Now
+        <a href="#" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto random-link">
+          View Product
         </a>
       </div>
     </div>
@@ -106,8 +151,8 @@
         <li>Plumps and rejuvenates skin</li>
       </ul>
       <div class="text-center">
-        <a href="#" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-3 px-6 rounded">
-          Shop Now
+        <a href="#" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto random-link">
+          View Product
         </a>
       </div>
     </div>
