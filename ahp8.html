@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <!-- Event snippet for Outbound click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16870615779/LuFoCLG6668aEOPVxOw-',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
 <script>
