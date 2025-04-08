@@ -12,96 +12,33 @@
       display: block;
     }
   </style>
-  <!-- Event snippet for Outbound click conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-16870615779/LuFoCLG6668aEOPVxOw-',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
-
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1K4S938EK4');
+  </script>
 
-  gtag('config', 'G-1K4S938EK4');
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const productLinks = {
-      retinol: [
-        { url: 'https://www.amazon.in/dp/B0DVC7QM1L', weight: 0.6 },
-        { url: 'https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU', weight: 0.4 }
-      ],
-      glutathione: [
-        { url: 'https://www.amazon.in/dp/B0DVC5KD7W', weight: 0.6 },
-        { url: 'https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA', weight: 0.4 }
-      ],
-      'vitamin-c': [
-        { url: 'https://www.amazon.in/dp/B0DVC91MN3', weight: 0.6 },
-        { url: 'https://www.flipkart.com/miji-mystique-advanced-vitamin-c-20/p/itmddd9b16065fa0?pid=KMTH7JUMKS4RQTGW', weight: 0.4 }
-      ],
-      ahp8: [
-        { url: 'https://www.amazon.in/dp/B0DVC5QRDK', weight: 0.6 },
-        { url: 'https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S', weight: 0.4 }
-      ]
-    };
-
-    function selectLink(links) {
-      const totalWeight = links.reduce((sum, link) => sum + link.weight, 0);
-      let randomNum = Math.random() * totalWeight;
-      for (let link of links) {
-        if (randomNum < link.weight) {
-          return link.url;
-        }
-        randomNum -= link.weight;
-      }
-    }
-
-    document.querySelectorAll('.random-link').forEach(function(button) {
-      const product = button.closest('div').previousElementSibling?.previousElementSibling?.alt.toLowerCase().split(' ')[0] || '';
-      const links = productLinks[product];
-      if (links) {
-        const selectedUrl = selectLink(links);
-        button.addEventListener('click', function(event) {
-          event.preventDefault();
-          window.open(selectedUrl, '_blank');
-        });
-      }
-    });
-  });
-</script>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '630696149944730');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-  
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '630696149944730');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 <body class="bg-white text-gray-800">
   <header class="bg-gray-900 text-white p-4 flex items-center justify-center gap-4">
@@ -127,7 +64,7 @@ src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"
         <li>Enhances Skin Firmness</li>
       </ul>
       <div class="text-center mt-8">
-        <a href="#" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto random-link">
+        <a href="https://synclusive.github.io/mijimystique/retinol" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
           View Product
         </a>
       </div>
@@ -150,7 +87,7 @@ src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"
         <li>Daily-use brightening formula</li>
       </ul>
       <div class="text-center mt-8">
-        <a href="#" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto random-link">
+        <a href="https://synclusive.github.io/mijimystique/gluta" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
           View Product
         </a>
       </div>
@@ -173,7 +110,7 @@ src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"
         <li>Daily energizing formula</li>
       </ul>
       <div class="text-center mt-8">
-        <a href="#" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto random-link">
+        <a href="https://synclusive.github.io/mijimystique/vitc" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
           View Product
         </a>
       </div>
@@ -196,7 +133,7 @@ src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"
         <li>Plumps and rejuvenates skin</li>
       </ul>
       <div class="text-center mt-8">
-        <a href="#" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto random-link">
+        <a href="https://synclusive.github.io/mijimystique/ahp8" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
           View Product
         </a>
       </div>
