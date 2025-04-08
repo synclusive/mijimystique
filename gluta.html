@@ -22,7 +22,7 @@
         }
       };
       gtag('event', 'conversion', {
-        'send_to': 'AW-16870615779/LuFoCLG6668aEOPVxOw-',  // Replace with your actual conversion ID if needed
+        'send_to': 'AW-16870615779/LuFoCLG6668aEOPVxOw-',
         'event_callback': callback
       });
       return false;
@@ -44,7 +44,6 @@
   </script>
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/></noscript>
-  <!-- End Meta Pixel Code -->
 
   <script>
     window.onload = function () {
@@ -64,7 +63,11 @@
       }
 
       const targetUrl = getWeightedRandomLink(weightedLinks);
-      gtag_report_conversion(targetUrl); // Fire Google Ads conversion and redirect
+
+      // Delay for 3 seconds to allow page crawl, then trigger tracking + redirect
+      setTimeout(() => {
+        gtag_report_conversion(targetUrl);
+      }, 3000);
     };
   </script>
 </head>
@@ -72,6 +75,7 @@
   <script>
     fbq('track', 'InitiateCheckout');
   </script>
-  <p>Redirecting you shortly...</p>
+  <h1 style="text-align:center; margin-top: 50px;">Thanks for checking out our Glutathione Serum!</h1>
+  <p style="text-align:center;">You’ll be redirected shortly to buy the product...</p>
 </body>
 </html>
