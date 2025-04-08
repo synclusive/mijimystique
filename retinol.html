@@ -13,7 +13,7 @@
     gtag('config', 'G-1K4S938EK4');
   </script>
 
-  <!-- Google Ads Outbound Click Conversion -->
+  <!-- Google Ads Outbound Conversion -->
   <script>
     function gtag_report_conversion(url) {
       var callback = function () {
@@ -43,11 +43,12 @@
     fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
-
+    src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/></noscript>
+</head>
+<body>
   <script>
+    fbq('track', 'InitiateCheckout');
+
     window.onload = function () {
       const weightedLinks = [
         { url: "https://www.amazon.in/dp/B0DVC7QM1L", weight: 60 },
@@ -66,15 +67,14 @@
 
       const targetUrl = getWeightedRandomLink(weightedLinks);
 
-      // Trigger Google Ads conversion and redirect
-      gtag_report_conversion(targetUrl);
+      // Trigger conversion + redirect after 3 seconds
+      setTimeout(() => {
+        gtag_report_conversion(targetUrl);
+      }, 3000);
     };
   </script>
-</head>
-<body>
-  <script>
-    fbq('track', 'InitiateCheckout');
-  </script>
-  <p>Redirecting you shortly...</p>
+
+  <h1 style="text-align:center; margin-top: 50px;">Thanks for visiting Miji Mystique!</h1>
+  <p style="text-align:center;">Redirecting you for buying the product...</p>
 </body>
 </html>
