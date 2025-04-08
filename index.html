@@ -22,6 +22,22 @@
     gtag('config', 'G-1K4S938EK4');
   </script>
 
+  <!-- Google Ads Outbound Click Conversion -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-16983040893/bcBICMqD6bUaEP3GkqI_',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+
   <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -64,8 +80,8 @@
         <li>Enhances Skin Firmness</li>
       </ul>
       <div class="text-center mt-8">
-        <a href="https://synclusive.github.io/mijimystique/retinol" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
-          View Product
+        <a href="https://synclusive.github.io/mijimystique/retinol" onclick="return gtag_report_conversion('https://synclusive.github.io/mijimystique/retinol')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
+          Shop Now
         </a>
       </div>
     </div>
@@ -87,8 +103,8 @@
         <li>Daily-use brightening formula</li>
       </ul>
       <div class="text-center mt-8">
-        <a href="https://synclusive.github.io/mijimystique/gluta" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
-          View Product
+        <a href="https://synclusive.github.io/mijimystique/gluta" onclick="return gtag_report_conversion('https://synclusive.github.io/mijimystique/gluta')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
+          Shop Now
         </a>
       </div>
     </div>
@@ -110,8 +126,8 @@
         <li>Daily energizing formula</li>
       </ul>
       <div class="text-center mt-8">
-        <a href="https://synclusive.github.io/mijimystique/vitc" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
-          View Product
+        <a href="https://synclusive.github.io/mijimystique/vitc" onclick="return gtag_report_conversion('https://synclusive.github.io/mijimystique/vitc')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
+          Shop Now
         </a>
       </div>
     </div>
@@ -133,8 +149,8 @@
         <li>Plumps and rejuvenates skin</li>
       </ul>
       <div class="text-center mt-8">
-        <a href="https://synclusive.github.io/mijimystique/ahp8" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
-          View Product
+        <a href="https://synclusive.github.io/mijimystique/ahp8" onclick="return gtag_report_conversion('https://synclusive.github.io/mijimystique/ahp8')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
+          Shop Now
         </a>
       </div>
     </div>
