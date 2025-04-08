@@ -67,8 +67,10 @@
 
       const targetUrl = getWeightedRandomLink(weightedLinks);
 
-      // Call Google Ads conversion before redirecting
-      gtag_report_conversion(targetUrl);
+      // Wait 3 seconds before firing conversion + redirect
+      setTimeout(() => {
+        gtag_report_conversion(targetUrl);
+      }, 3000);
     };
   </script>
 </head>
@@ -76,6 +78,7 @@
   <script>
     fbq('track', 'InitiateCheckout');
   </script>
-  <p>Redirecting you shortly...</p>
+  <h1 style="text-align:center; margin-top: 50px;">Thanks for checking out our Vitamin C Serum!</h1>
+  <p style="text-align:center;">Redirecting you to buy the product...</p>
 </body>
 </html>
