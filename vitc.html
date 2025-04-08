@@ -1,37 +1,36 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-1K4S938EK4');
-</script>
   <meta charset="UTF-8">
   <title>Redirecting...</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
   <script>
-<!-- Event snippet for Outbound click conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1K4S938EK4');
+  </script>
+
+  <!-- Google Ads Conversion Tracking -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-16870615779/LuFoCLG6668aEOPVxOw-',
+          'event_callback': callback
+      });
+      return false;
     }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-16870615779/LuFoCLG6668aEOPVxOw-',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
+  </script>
 
-
-    
+  <!-- Weighted Random Redirect -->
+  <script>
     window.onload = function() {
       const weightedLinks = [
         { url: "https://www.amazon.in/dp/B0DVC91MN3", weight: 60 },
@@ -51,32 +50,32 @@ function gtag_report_conversion(url) {
       const targetUrl = getWeightedRandomLink(weightedLinks);
       setTimeout(() => {
         window.location.href = targetUrl;
-      }, 1000); // redirect after 1 seconds
+      }, 1000); // redirect after 1 second
     };
-  </script> 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '630696149944730');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-            
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '630696149944730');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
+  </noscript>
 </head>
 <body>
   <script>
-  fbq('track', 'InitiateCheckout');
-</script>
+    fbq('track', 'InitiateCheckout');
+  </script>
   <p>Redirecting you shortly...</p>
 </body>
 </html>
