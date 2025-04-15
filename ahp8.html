@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting...</title>
+  <title>Miji Mystique - AHP8 Peptide Serum</title>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -13,7 +13,7 @@
     gtag('config', 'G-1K4S938EK4');
   </script>
 
-  <!-- Google Ads Outbound Conversion Tracking -->
+  <!-- Google Ads Conversion -->
   <script>
     function gtag_report_conversion(url) {
       var callback = function () {
@@ -29,7 +29,7 @@
     }
   </script>
 
-  <!-- Meta Pixel Code -->
+  <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -44,40 +44,139 @@
   </script>
   <noscript>
     <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
+         src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
   </noscript>
 
   <script>
-    window.onload = function () {
-      const weightedLinks = [
-        { url: "https://www.amazon.in/dp/B0DVC5QRDK", weight: 60 },
-        { url: "https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S", weight: 40 }
-      ];
+    const links = [
+      "https://www.amazon.in/dp/B0DVC5QRDK",
+      "https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S"
+    ];
 
-      function getWeightedRandomLink(links) {
-        const totalWeight = links.reduce((sum, link) => sum + link.weight, 0);
-        const randomNum = Math.random() * totalWeight;
-        let sum = 0;
-        for (const link of links) {
-          sum += link.weight;
-          if (randomNum <= sum) return link.url;
-        }
+    function getRandomLink(links) {
+      const index = Math.floor(Math.random() * links.length);
+      return links[index];
+    }
+
+    function handleShopNowClick() {
+      const targetUrl = getRandomLink(links);
+      fbq('track', 'InitiateCheckout');
+      gtag_report_conversion(targetUrl);
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #a67458;
+      padding: 5px 0;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    .logo {
+      width: 60px;
+      margin: 5px auto;
+      display: block;
+    }
+    .product-img {
+      max-width: 50%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+    .description {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+      padding: 0 10px;
+    }
+    .description ul {
+      list-style-type: disc;
+      display: inline-block;
+      text-align: left;
+    }
+    .highlight-text {
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+      padding: 0 15px;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    .shop-now-btn {
+      padding: 18px 50px;
+      background-color: #ff4500;
+      color: white;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      display: block;
+      width: 90%;
+      max-width: 350px;
+      margin: 30px auto;
+      transition: transform 0.2s;
+    }
+    .shop-now-btn:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 12px;
+        padding: 8px 0;
       }
-
-      const targetUrl = getWeightedRandomLink(weightedLinks);
-
-      // Wait 3 seconds, then trigger tracking + redirect
-      setTimeout(() => {
-        gtag_report_conversion(targetUrl);
-      }, 3000);
-    };
-  </script>
+      .logo {
+        width: 50px;
+      }
+      .shop-now-btn {
+        width: 95%;
+        font-size: 16px;
+        padding: 15px 40px;
+      }
+      .description ul {
+        padding-left: 15px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <script>
-    fbq('track', 'InitiateCheckout');
-  </script>
-  <h1 style="text-align:center; margin-top: 50px;">Thanks for exploring AHP8 Peptide Serum!</h1>
-  <p style="text-align:center;">Taking you for product check out...</p>
+  <header>
+    <img class="logo" src="logo.png" alt="Miji Mystique Logo">
+    <div>MIJI MYSTIQUE: REVEAL YOUR SKIN'S TRUE RADIANCE</div>
+  </header>
+
+  <h1 style="text-align:center; margin-top:30px; font-size: 20px; padding: 0 10px;">
+    AHP8 Peptide + Niacinamide Serum
+  </h1>
+
+  <p class="highlight-text">
+    Firm. Restore. Smooth. This powerhouse serum combines AHP8 peptides and Niacinamide to reduce expression lines, strengthen the skin barrier, and reveal visibly firmer skin.
+  </p>
+
+  <img class="product-img" src="5-min.jpg" alt="AHP8 Serum">
+
+  <div class="description">
+    <ul>
+      <li>Targets fine lines & crow’s feet</li>
+      <li>Improves skin elasticity & firmness</li>
+      <li>Reduces redness & irritation</li>
+      <li>Strengthens the skin barrier</li>
+      <li>Boosts hydration and glow</li>
+      <li>Ideal for aging & sensitive skin</li>
+      <li>Lightweight & fast absorbing</li>
+    </ul>
+  </div>
+
+  <button class="shop-now-btn" onclick="handleShopNowClick()">Buy Now</button>
 </body>
 </html>
