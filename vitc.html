@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting...</title>
+  <title>Vitamin C Serum - Shop Now</title>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
@@ -13,7 +13,7 @@
     gtag('config', 'G-1K4S938EK4');
   </script>
 
-  <!-- Google Ads Outbound Conversion Tracking -->
+  <!-- Google Ads Conversion Tracking -->
   <script>
     function gtag_report_conversion(url) {
       var callback = function () {
@@ -49,36 +49,45 @@
   <!-- End Meta Pixel Code -->
 
   <script>
-    window.onload = function () {
-      const weightedLinks = [
-        { url: "https://www.amazon.in/dp/B0DVC91MN3", weight: 60 },
-        { url: "https://www.flipkart.com/miji-mystique-advanced-vitamin-c-20/p/itmddd9b16065fa0?pid=KMTH7JUMKS4RQTGW", weight: 40 }
-      ];
+    const weightedLinks = [
+      { url: "https://www.amazon.in/dp/B0DVC91MN3", weight: 60 },
+      { url: "https://www.flipkart.com/miji-mystique-advanced-vitamin-c-20/p/itmddd9b16065fa0?pid=KMTH7JUMKS4RQTGW", weight: 40 }
+    ];
 
-      function getWeightedRandomLink(links) {
-        const totalWeight = links.reduce((sum, link) => sum + link.weight, 0);
-        const randomNum = Math.random() * totalWeight;
-        let sum = 0;
-        for (const link of links) {
-          sum += link.weight;
-          if (randomNum <= sum) return link.url;
-        }
+    function getWeightedRandomLink(links) {
+      const totalWeight = links.reduce((sum, link) => sum + link.weight, 0);
+      const randomNum = Math.random() * totalWeight;
+      let sum = 0;
+      for (const link of links) {
+        sum += link.weight;
+        if (randomNum <= sum) return link.url;
       }
+    }
 
+    function handleShopNowClick() {
       const targetUrl = getWeightedRandomLink(weightedLinks);
-
-      // Wait 3 seconds before firing conversion + redirect
-      setTimeout(() => {
-        gtag_report_conversion(targetUrl);
-      }, 3000);
-    };
+      fbq('track', 'InitiateCheckout');
+      gtag_report_conversion(targetUrl);
+    }
   </script>
+
+  <style>
+    .shop-now-btn {
+      padding: 15px 30px;
+      background-color: #ff4500;
+      color: white;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      display: block;
+      margin: 30px auto;
+    }
+  </style>
+
 </head>
 <body>
-  <script>
-    fbq('track', 'InitiateCheckout');
-  </script>
-  <h1 style="text-align:center; margin-top: 50px;">Thanks for checking out our Vitamin C Serum!</h1>
-  <p style="text-align:center;">Redirecting you to buy the product...</p>
+  <h1 style="text-align:center; margin-top:50px;">Thanks for checking out our Vitamin C Serum!</h1>
+  <button class="shop-now-btn" onclick="handleShopNowClick()">Shop Now</button>
 </body>
 </html>
