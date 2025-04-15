@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting...</title>
+  <title>Miji Mystique - Retinol Serum</title>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -13,7 +13,7 @@
     gtag('config', 'G-1K4S938EK4');
   </script>
 
-  <!-- Google Ads Outbound Conversion -->
+  <!-- Google Ads Conversion -->
   <script>
     function gtag_report_conversion(url) {
       var callback = function () {
@@ -22,14 +22,14 @@
         }
       };
       gtag('event', 'conversion', {
-          'send_to': 'AW-16870615779/LuFoCLG6668aEOPVxOw-',
-          'event_callback': callback
+        'send_to': 'AW-16870615779/LuFoCLG6668aEOPVxOw-',
+        'event_callback': callback
       });
       return false;
     }
   </script>
 
-  <!-- Meta Pixel Code -->
+  <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -42,39 +42,141 @@
     fbq('init', '630696149944730');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/></noscript>
-</head>
-<body>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
+  </noscript>
+
   <script>
-    fbq('track', 'InitiateCheckout');
+    const links = [
+      "https://www.amazon.in/dp/B0DVC7QM1L",
+      "https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU"
+    ];
 
-    window.onload = function () {
-      const weightedLinks = [
-        { url: "https://www.amazon.in/dp/B0DVC7QM1L", weight: 60 },
-        { url: "https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU", weight: 40 }
-      ];
+    function getRandomLink(links) {
+      const index = Math.floor(Math.random() * links.length);
+      return links[index];
+    }
 
-      function getWeightedRandomLink(links) {
-        const totalWeight = links.reduce((sum, link) => sum + link.weight, 0);
-        const randomNum = Math.random() * totalWeight;
-        let sum = 0;
-        for (const link of links) {
-          sum += link.weight;
-          if (randomNum <= sum) return link.url;
-        }
-      }
-
-      const targetUrl = getWeightedRandomLink(weightedLinks);
-
-      // Trigger conversion + redirect after 3 seconds
-      setTimeout(() => {
-        gtag_report_conversion(targetUrl);
-      }, 3000);
-    };
+    function handleShopNowClick() {
+      const targetUrl = getRandomLink(links);
+      fbq('track', 'InitiateCheckout');
+      gtag_report_conversion(targetUrl);
+    }
   </script>
 
-  <h1 style="text-align:center; margin-top: 50px;">Thanks for visiting Miji Mystique!</h1>
-  <p style="text-align:center;">Redirecting you for buying the product...</p>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #a67458;
+      padding: 5px 0;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    .logo {
+      width: 60px;
+      margin: 5px auto;
+      display: block;
+    }
+    .product-img {
+      max-width: 50%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+    .description {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+      padding: 0 10px;
+    }
+    .description ul {
+      list-style-type: disc;
+      display: inline-block;
+      text-align: left;
+    }
+    .highlight-text {
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+      padding: 0 15px;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    .shop-now-btn {
+      padding: 18px 50px;
+      background-color: #ff4500;
+      color: white;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      display: block;
+      width: 90%;
+      max-width: 350px;
+      margin: 30px auto;
+      transition: transform 0.2s;
+    }
+    .shop-now-btn:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 12px;
+        padding: 8px 0;
+      }
+      .logo {
+        width: 50px;
+      }
+      .shop-now-btn {
+        width: 95%;
+        font-size: 16px;
+        padding: 15px 40px;
+      }
+      .description ul {
+        padding-left: 15px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <header>
+    <img class="logo" src="logo.png" alt="Miji Mystique Logo">
+    <div>MIJI MYSTIQUE: REVEAL YOUR SKIN'S TRUE RADIANCE</div>
+  </header>
+
+  <h1 style="text-align:center; margin-top:30px; font-size: 20px; padding: 0 10px;">
+    2% Retinol Vitamin A Face Serum
+  </h1>
+
+  <p class="highlight-text">
+    Smooth. Refine. Renew. Enriched with Retinol and Vitamin E, this serum reduces signs of aging, refines pores, and promotes cell turnover—revealing youthful, radiant skin.
+  </p>
+
+  <img class="product-img" src="retinol.png" alt="Retinol Serum">
+
+  <div class="description">
+    <ul>
+      <li>Fades fine lines & wrinkles</li>
+      <li>Boosts collagen production</li>
+      <li>Improves skin texture</li>
+      <li>Unclogs and tightens pores</li>
+      <li>Reduces acne and blemishes</li>
+      <li>Gentle yet effective formula</li>
+      <li>Best used at night</li>
+    </ul>
+  </div>
+
+  <button class="shop-now-btn" onclick="handleShopNowClick()">Buy Now</button>
 </body>
 </html>
