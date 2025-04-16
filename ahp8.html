@@ -13,22 +13,6 @@
     gtag('config', 'G-1K4S938EK4');
   </script>
 
-  <!-- Google Ads Conversion -->
-  <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) !== 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-        'send_to': 'AW-16870615779/LuFoCLG6668aEOPVxOw-',
-        'event_callback': callback
-      });
-      return false;
-    }
-  </script>
-
   <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -47,21 +31,26 @@
          src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
   </noscript>
 
+  <!-- Button Event Tracking -->
   <script>
-    const links = [
-      "https://www.amazon.in/dp/B0DVC5QRDK",
-      "https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S"
-    ];
-
-    function getRandomLink(links) {
-      const index = Math.floor(Math.random() * links.length);
-      return links[index];
+    function trackAmazonAHP8() {
+      gtag('event', 'buy_on_amazon_ahp8', {
+        event_category: 'ecommerce',
+        event_label: 'AHP8 - Amazon',
+        value: 1
+      });
+      fbq('trackCustom', 'BuyOnAmazonAHP8');
+      window.location.href = 'https://www.amazon.in/dp/B0DVC5QRDK';
     }
 
-    function handleShopNowClick() {
-      const targetUrl = getRandomLink(links);
-      fbq('track', 'InitiateCheckout');
-      gtag_report_conversion(targetUrl);
+    function trackFlipkartAHP8() {
+      gtag('event', 'buy_on_flipkart_ahp8', {
+        event_category: 'ecommerce',
+        event_label: 'AHP8 - Flipkart',
+        value: 1
+      });
+      fbq('trackCustom', 'BuyOnFlipkartAHP8');
+      window.location.href = 'https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S';
     }
   </script>
 
@@ -110,8 +99,15 @@
       margin: 20px auto;
       max-width: 600px;
     }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
     .shop-now-btn {
-      padding: 18px 50px;
+      padding: 20px 50px;
       background-color: #ff4500;
       color: white;
       font-size: 18px;
@@ -119,11 +115,8 @@
       cursor: pointer;
       border-radius: 30px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      display: block;
-      width: 90%;
-      max-width: 350px;
-      margin: 30px auto;
       transition: transform 0.2s;
+      min-width: 160px;
     }
     .shop-now-btn:hover {
       transform: scale(1.05);
@@ -138,12 +131,9 @@
         width: 50px;
       }
       .shop-now-btn {
+        font-size: 20px;
+        padding: 20px 40px;
         width: 95%;
-        font-size: 16px;
-        padding: 15px 40px;
-      }
-      .description ul {
-        padding-left: 15px;
       }
     }
   </style>
@@ -177,6 +167,48 @@
     </ul>
   </div>
 
-  <button class="shop-now-btn" onclick="handleShopNowClick()">Buy Now</button>
+  <div class="button-container">
+    <button class="shop-now-btn" onclick="trackAmazonAHP8()">Buy on Amazon</button>
+    <button class="shop-now-btn" onclick="trackFlipkartAHP8()">Buy on Flipkart</button>
+  </div>
+
+  <div style="max-width: 800px; margin: 50px auto 20px; padding: 0 15px; font-size: 16px; line-height: 1.6; color: #333;">
+    <h2 style="text-align: center; color: #a67458; font-size: 22px;">Peptide Power for Firm, Smooth Skin</h2>
+
+    <p>
+      AHP8 + Niacinamide is your go-to formula to firm skin, reduce fine lines, and enhance hydration. This serum is specially developed to mimic the effects of Botox-like peptides while being safe for daily use.
+    </p>
+
+    <h3 style="color: #444; margin-top: 25px;">Why AHP8 + Niacinamide?</h3>
+    <p>
+      AHP8 is a skin-smoothing peptide that works on dynamic wrinkles and smile lines, while Niacinamide reduces inflammation, improves texture, and reinforces the skin barrier.
+    </p>
+    <p style="font-style: italic;">Popular search terms: peptide anti-aging serum, AHP8 peptide, niacinamide face serum, anti-wrinkle serum, skin firming serum.</p>
+
+    <h3 style="color: #444; margin-top: 25px;">Key Benefits:</h3>
+    <ul style="padding-left: 20px;">
+      <li><strong>Softens Expression Lines:</strong> Especially around forehead & eyes</li>
+      <li><strong>Improves Elasticity:</strong> Promotes firm, plump skin</li>
+      <li><strong>Reduces Inflammation:</strong> Calms sensitive & red skin</li>
+      <li><strong>Barrier Repair:</strong> Strengthens the skin’s natural defense</li>
+    </ul>
+
+    <h3 style="color: #444; margin-top: 25px;">How to Use:</h3>
+    <p>
+      Apply 2–3 drops after cleansing and toning. Use twice daily for best results. Follow with moisturizer. Safe for sensitive and mature skin.
+    </p>
+
+    <p style="margin-top: 15px;">
+      Lightweight and fragrance-free, this serum works well under makeup or sunscreen.
+    </p>
+
+    <p style="font-weight: bold; color: #222; margin-top: 20px;">
+      Firm and restore with AHP8 Peptide + Niacinamide—your daily wrinkle-fighting companion.
+    </p>
+  </div>
+
+  <footer style="background-color: #f0e6e1; text-align: center; padding: 20px; font-size: 14px; color: #555; margin-top: 40px;">
+    © 2025 <strong>Miji Mystique</strong>. All rights reserved.
+  </footer>
 </body>
 </html>
