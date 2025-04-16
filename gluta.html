@@ -13,22 +13,6 @@
     gtag('config', 'G-1K4S938EK4');
   </script>
 
-  <!-- Google Ads Conversion -->
-  <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) !== 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-        'send_to': 'AW-16870615779/LuFoCLG6668aEOPVxOw-',
-        'event_callback': callback
-      });
-      return false;
-    }
-  </script>
-
   <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -47,21 +31,26 @@
          src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
   </noscript>
 
+  <!-- Custom Button Events -->
   <script>
-    const links = [
-      "https://www.amazon.in/dp/B0DVC5KD7W",
-      "https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA"
-    ];
-
-    function getRandomLink(links) {
-      const index = Math.floor(Math.random() * links.length);
-      return links[index];
+    function trackAmazonGluta() {
+      gtag('event', 'buy_on_amazon_gluta', {
+        event_category: 'ecommerce',
+        event_label: 'Glutathione - Amazon',
+        value: 1
+      });
+      fbq('trackCustom', 'BuyOnAmazonGlutathione');
+      window.location.href = 'https://www.amazon.in/dp/B0DVC5KD7W';
     }
 
-    function handleShopNowClick() {
-      const targetUrl = getRandomLink(links);
-      fbq('track', 'InitiateCheckout');
-      gtag_report_conversion(targetUrl);
+    function trackFlipkartGluta() {
+      gtag('event', 'buy_on_flipkart_gluta', {
+        event_category: 'ecommerce',
+        event_label: 'Glutathione - Flipkart',
+        value: 1
+      });
+      fbq('trackCustom', 'BuyOnFlipkartGlutathione');
+      window.location.href = 'https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA';
     }
   </script>
 
@@ -110,8 +99,15 @@
       margin: 20px auto;
       max-width: 600px;
     }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
     .shop-now-btn {
-      padding: 18px 50px;
+      padding: 20px 50px;
       background-color: #ff4500;
       color: white;
       font-size: 18px;
@@ -119,11 +115,8 @@
       cursor: pointer;
       border-radius: 30px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      display: block;
-      width: 90%;
-      max-width: 350px;
-      margin: 30px auto;
       transition: transform 0.2s;
+      min-width: 160px;
     }
     .shop-now-btn:hover {
       transform: scale(1.05);
@@ -138,12 +131,9 @@
         width: 50px;
       }
       .shop-now-btn {
+        font-size: 20px;
+        padding: 20px 40px;
         width: 95%;
-        font-size: 16px;
-        padding: 15px 40px;
-      }
-      .description ul {
-        padding-left: 15px;
       }
     }
   </style>
@@ -177,6 +167,48 @@
     </ul>
   </div>
 
-  <button class="shop-now-btn" onclick="handleShopNowClick()">Buy Now</button>
+  <div class="button-container">
+    <button class="shop-now-btn" onclick="trackAmazonGluta()">Buy on Amazon</button>
+    <button class="shop-now-btn" onclick="trackFlipkartGluta()">Buy on Flipkart</button>
+  </div>
+
+  <div style="max-width: 800px; margin: 50px auto 20px; padding: 0 15px; font-size: 16px; line-height: 1.6; color: #333;">
+    <h2 style="text-align: center; color: #a67458; font-size: 22px;">Even Skin Tone with Glutathione + Kojic Acid Serum</h2>
+
+    <p>
+      Achieve a brighter, more balanced complexion with this dermatologist-formulated serum. Designed to reduce hyperpigmentation, dark spots, and dullness, it combines powerful antioxidants for radiant skin.
+    </p>
+
+    <h3 style="color: #444; margin-top: 25px;">Why Choose Glutathione + Kojic Acid?</h3>
+    <p>
+      Glutathione is a master antioxidant that works to reduce melanin, while Kojic Acid and Alpha Arbutin target visible discoloration. Together, they leave skin visibly clearer and more luminous.
+    </p>
+    <p style="font-style: italic;">Popular search terms: skin brightening serum, glutathione for skin, kojic acid face serum, pigmentation removal, dark spot corrector.</p>
+
+    <h3 style="color: #444; margin-top: 25px;">Benefits of Glutathione Serum:</h3>
+    <ul style="padding-left: 20px;">
+      <li><strong>Reduces Pigmentation:</strong> Targets melanin to fade dark spots</li>
+      <li><strong>Evens Skin Tone:</strong> Helps correct uneven tone and dullness</li>
+      <li><strong>Brightens Complexion:</strong> Supports a natural glow</li>
+      <li><strong>Antioxidant-Rich:</strong> Fights oxidative stress and free radicals</li>
+    </ul>
+
+    <h3 style="color: #444; margin-top: 25px;">How to Use:</h3>
+    <p>
+      Use daily in the morning or evening after cleansing. Apply 2–3 drops to face and neck. Follow with moisturizer and SPF (if used during daytime).
+    </p>
+
+    <p style="margin-top: 15px;">
+      This formula is gentle on most skin types and suitable for regular use.
+    </p>
+
+    <p style="font-weight: bold; color: #222; margin-top: 20px;">
+      Illuminate your skin safely—reveal your best complexion with our Glutathione Brightening Serum.
+    </p>
+  </div>
+
+  <footer style="background-color: #f0e6e1; text-align: center; padding: 20px; font-size: 14px; color: #555; margin-top: 40px;">
+    © 2025 <strong>Miji Mystique</strong>. All rights reserved.
+  </footer>
 </body>
 </html>
