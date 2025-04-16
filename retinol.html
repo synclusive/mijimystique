@@ -16,7 +16,7 @@
   <!-- Google Ads Conversion -->
   <script>
     function gtag_report_conversion(url) {
-      var callback = function () {
+      const callback = function () {
         if (typeof(url) !== 'undefined') {
           window.location = url;
         }
@@ -25,7 +25,12 @@
         'send_to': 'AW-16870615779/LuFoCLG6668aEOPVxOw-',
         'event_callback': callback
       });
-      return false;
+    }
+
+    function trackAndRedirect(platform, url) {
+      fbq('track', 'InitiateCheckout');
+      gtag_report_conversion(url);
+      window.location.href = url;
     }
   </script>
 
@@ -46,24 +51,6 @@
     <img height="1" width="1" style="display:none"
          src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
   </noscript>
-
-  <script>
-    const links = [
-      "https://www.amazon.in/dp/B0DVC7QM1L",
-      "https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU"
-    ];
-
-    function getRandomLink(links) {
-      const index = Math.floor(Math.random() * links.length);
-      return links[index];
-    }
-
-    function handleShopNowClick() {
-      const targetUrl = getRandomLink(links);
-      fbq('track', 'InitiateCheckout');
-      gtag_report_conversion(targetUrl);
-    }
-  </script>
 
   <style>
     body {
@@ -110,20 +97,24 @@
       margin: 20px auto;
       max-width: 600px;
     }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
     .shop-now-btn {
-      padding: 18px 50px;
+      padding: 16px 30px;
       background-color: #ff4500;
       color: white;
-      font-size: 18px;
+      font-size: 16px;
       border: none;
       cursor: pointer;
       border-radius: 30px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      display: block;
-      width: 90%;
-      max-width: 350px;
-      margin: 30px auto;
       transition: transform 0.2s;
+      min-width: 160px;
     }
     .shop-now-btn:hover {
       transform: scale(1.05);
@@ -138,12 +129,8 @@
         width: 50px;
       }
       .shop-now-btn {
-        width: 95%;
-        font-size: 16px;
-        padding: 15px 40px;
-      }
-      .description ul {
-        padding-left: 15px;
+        font-size: 15px;
+        padding: 14px 20px;
       }
     }
   </style>
@@ -177,6 +164,9 @@
     </ul>
   </div>
 
-  <button class="shop-now-btn" onclick="handleShopNowClick()">Buy Now</button>
+  <div class="button-container">
+    <button class="shop-now-btn" onclick="trackAndRedirect('amazon', 'https://www.amazon.in/dp/B0DVC7QM1L')">Buy on Amazon</button>
+    <button class="shop-now-btn" onclick="trackAndRedirect('flipkart', 'https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU')">Buy on Flipkart</button>
+  </div>
 </body>
 </html>
