@@ -11,6 +11,9 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-1K4S938EK4');
+
+    // Google Ads Conversion ID
+    gtag('config', 'AW-16983040893');
   </script>
 
   <!-- Facebook Pixel -->
@@ -34,23 +37,49 @@
   <!-- Custom JS Events -->
   <script>
     function trackAmazonRetinol() {
-      gtag('event', 'buy_on_amazon_retinol', {
-        event_category: 'ecommerce',
-        event_label: 'Retinol - Amazon',
-        value: 1
+      gtag('event', 'shop_now_click', {
+        'product_name': 'Retinol Serum',
+        'platform': 'Amazon',
+        'destination_url': 'https://www.amazon.in/dp/B0DVC7QM1L'
       });
       fbq('trackCustom', 'BuyOnAmazonRetinol');
-      window.location.href = 'https://www.amazon.in/dp/B0DVC7QM1L';
+      return gtag_report_conversion_amazon('https://www.amazon.in/dp/B0DVC7QM1L');
     }
 
     function trackFlipkartRetinol() {
-      gtag('event', 'buy_on_flipkart_retinol', {
-        event_category: 'ecommerce',
-        event_label: 'Retinol - Flipkart',
-        value: 1
+      gtag('event', 'shop_now_click', {
+        'product_name': 'Retinol Serum',
+        'platform': 'Flipkart',
+        'destination_url': 'https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU'
       });
       fbq('trackCustom', 'BuyOnFlipkartRetinol');
-      window.location.href = 'https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU';
+      return gtag_report_conversion_flipkart('https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU');
+    }
+
+    function gtag_report_conversion_amazon(url) {
+      var callback = function () {
+        if (typeof(url) !== 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16983040893/9xIBCPLMnLkaEP3GkqI_',
+        'event_callback': callback
+      });
+      return false;
+    }
+
+    function gtag_report_conversion_flipkart(url) {
+      var callback = function () {
+        if (typeof(url) !== 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16983040893/7wiSCLKbqbkaEP3GkqI_',
+        'event_callback': callback
+      });
+      return false;
     }
   </script>
 
@@ -121,7 +150,6 @@
     .shop-now-btn:hover {
       transform: scale(1.05);
     }
-
     @media (max-width: 600px) {
       header {
         font-size: 12px;
@@ -155,48 +183,36 @@
 
   <img class="product-img" src="2-min.jpg" alt="Retinol Serum">
 
-
   <div class="button-container">
     <button class="shop-now-btn" onclick="trackAmazonRetinol()">Buy on Amazon</button>
     <button class="shop-now-btn" onclick="trackFlipkartRetinol()">Buy on Flipkart</button>
   </div>
 
   <div style="max-width: 800px; margin: 50px auto 20px; padding: 0 15px; font-size: 16px; line-height: 1.6; color: #333;">
-  <h2 style="text-align: center; color: #a67458; font-size: 22px;">Renew Your Skin with Vitamin A (Retinol) Skincare Serum</h2>
+    <h2 style="text-align: center; color: #a67458; font-size: 22px;">Renew Your Skin with Vitamin A (Retinol) Skincare Serum</h2>
+    <p>Looking to enhance your skincare routine and achieve smoother, youthful, and revitalized skin? Vitamin A, commonly known as Retinol, is renowned for its remarkable anti-aging and skin-renewing properties, effectively targeting wrinkles, uneven skin texture, and signs of aging.</p>
 
-  <p>
-    Looking to enhance your skincare routine and achieve smoother, youthful, and revitalized skin? Vitamin A, commonly known as Retinol, is renowned for its remarkable anti-aging and skin-renewing properties, effectively targeting wrinkles, uneven skin texture, and signs of aging.
-  </p>
+    <h3 style="color: #444; margin-top: 25px;">Why Choose Vitamin A (Retinol)?</h3>
+    <p>Vitamin A (Retinol) is a powerful skincare ingredient clinically proven to boost skin cell turnover, stimulate collagen production, and reduce the appearance of fine lines, wrinkles, and uneven skin tone.</p>
+    <p style="font-style: italic;">Popular search terms: retinol serum, anti-aging skincare, wrinkle reduction, skin renewal serum, Vitamin A benefits.</p>
 
-  <h3 style="color: #444; margin-top: 25px;">Why Choose Vitamin A (Retinol)?</h3>
-  <p>
-    Vitamin A (Retinol) is a powerful skincare ingredient clinically proven to boost skin cell turnover, stimulate collagen production, and reduce the appearance of fine lines, wrinkles, and uneven skin tone.
-  </p>
-  <p style="font-style: italic;">Popular search terms: retinol serum, anti-aging skincare, wrinkle reduction, skin renewal serum, Vitamin A benefits.</p>
+    <h3 style="color: #444; margin-top: 25px;">Benefits of Vitamin A Skincare Serum:</h3>
+    <ul style="padding-left: 20px;">
+      <li><strong>Reduces Fine Lines and Wrinkles:</strong> Retinol promotes collagen production, visibly diminishing wrinkles and fine lines.</li>
+      <li><strong>Improves Skin Texture:</strong> Helps smooth out rough patches, refine pores, and improve overall skin texture for a youthful appearance.</li>
+      <li><strong>Brightens Skin Tone:</strong> Effectively reduces pigmentation, dark spots, and uneven skin tone, promoting a clear, radiant complexion.</li>
+      <li><strong>Stimulates Skin Renewal:</strong> Enhances cell turnover, revealing fresh, healthy, and revitalized skin.</li>
+    </ul>
 
-  <h3 style="color: #444; margin-top: 25px;">Benefits of Vitamin A Skincare Serum:</h3>
-  <ul style="padding-left: 20px;">
-    <li><strong>Reduces Fine Lines and Wrinkles:</strong> Retinol promotes collagen production, visibly diminishing wrinkles and fine lines.</li>
-    <li><strong>Improves Skin Texture:</strong> Helps smooth out rough patches, refine pores, and improve overall skin texture for a youthful appearance.</li>
-    <li><strong>Brightens Skin Tone:</strong> Effectively reduces pigmentation, dark spots, and uneven skin tone, promoting a clear, radiant complexion.</li>
-    <li><strong>Stimulates Skin Renewal:</strong> Enhances cell turnover, revealing fresh, healthy, and revitalized skin.</li>
-  </ul>
+    <h3 style="color: #444; margin-top: 25px;">How to Use:</h3>
+    <p>Apply Vitamin A (Retinol) Serum to clean, dry skin in the evening. Gently massage into the face and neck until fully absorbed. Follow with your favorite moisturizer. Always apply sunscreen during the day, as retinol can increase sun sensitivity.</p>
 
-  <h3 style="color: #444; margin-top: 25px;">How to Use:</h3>
-  <p>
-    Apply Vitamin A (Retinol) Serum to clean, dry skin in the evening. Gently massage into the face and neck until fully absorbed. Follow with your favorite moisturizer. Always apply sunscreen during the day, as retinol can increase sun sensitivity.
-  </p>
+    <p style="margin-top: 15px;">Ideal for most skin types, Vitamin A serum seamlessly fits into your nightly skincare regimen, delivering impressive, transformative results.</p>
 
-  <p style="margin-top: 15px;">
-    Ideal for most skin types, Vitamin A serum seamlessly fits into your nightly skincare regimen, delivering impressive, transformative results.
-  </p>
+    <p style="font-weight: bold; color: #222; margin-top: 20px;">Unlock younger-looking skin today—experience the renewing power of Vitamin A (Retinol) Skincare Serum.</p>
+  </div>
 
-  <p style="font-weight: bold; color: #222; margin-top: 20px;">
-    Unlock younger-looking skin today—experience the renewing power of Vitamin A (Retinol) Skincare Serum.
-  </p>
-</div>
-
-   <footer style="background-color: #f0e6e1; text-align: center; padding: 20px; font-size: 14px; color: #555; margin-top: 40px;">
+  <footer style="background-color: #f0e6e1; text-align: center; padding: 20px; font-size: 14px; color: #555; margin-top: 40px;">
     © 2025 <strong>Miji Mystique</strong>. All rights reserved.
   </footer>
 </body>
