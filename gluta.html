@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <title>Miji Mystique - Glutathione Serum</title>
 
-  <!-- Google tag -->
+  <!-- Google Analytics 4 (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-1K4S938EK4');
+    gtag('config', 'AW-16983040893');
   </script>
 
-  <!-- Meta Pixel -->
+  <!-- Facebook Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -31,26 +32,51 @@
          src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
   </noscript>
 
-  <!-- Custom Button Events -->
   <script>
+    function gtag_report_conversion_amazon(url) {
+      var callback = function () {
+        if (typeof(url) !== 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16983040893/aQ4ICLPrqrkaEP3GkqI_',
+        'event_callback': callback
+      });
+      return false;
+    }
+
+    function gtag_report_conversion_flipkart(url) {
+      var callback = function () {
+        if (typeof(url) !== 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16983040893/8nxACO3yqrkaEP3GkqI_',
+        'event_callback': callback
+      });
+      return false;
+    }
+
     function trackAmazonGluta() {
-      gtag('event', 'buy_on_amazon_gluta', {
-        event_category: 'ecommerce',
-        event_label: 'Glutathione - Amazon',
-        value: 1
+      gtag('event', 'shop_now_click', {
+        'product_name': 'Glutathione Serum',
+        'platform': 'Amazon',
+        'destination_url': 'https://www.amazon.in/dp/B0DVC5KD7W'
       });
       fbq('trackCustom', 'BuyOnAmazonGlutathione');
-      window.location.href = 'https://www.amazon.in/dp/B0DVC5KD7W';
+      return gtag_report_conversion_amazon('https://www.amazon.in/dp/B0DVC5KD7W');
     }
 
     function trackFlipkartGluta() {
-      gtag('event', 'buy_on_flipkart_gluta', {
-        event_category: 'ecommerce',
-        event_label: 'Glutathione - Flipkart',
-        value: 1
+      gtag('event', 'shop_now_click', {
+        'product_name': 'Glutathione Serum',
+        'platform': 'Flipkart',
+        'destination_url': 'https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA'
       });
       fbq('trackCustom', 'BuyOnFlipkartGlutathione');
-      window.location.href = 'https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA';
+      return gtag_report_conversion_flipkart('https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA');
     }
   </script>
 
@@ -79,17 +105,6 @@
       height: auto;
       display: block;
       margin: 20px auto;
-    }
-    .description {
-      text-align: center;
-      margin-top: 20px;
-      font-weight: bold;
-      padding: 0 10px;
-    }
-    .description ul {
-      list-style-type: disc;
-      display: inline-block;
-      text-align: left;
     }
     .highlight-text {
       font-weight: bold;
@@ -121,24 +136,8 @@
     .shop-now-btn:hover {
       transform: scale(1.05);
     }
-
-    @media (max-width: 600px) {
-      header {
-        font-size: 12px;
-        padding: 8px 0;
-      }
-      .logo {
-        width: 50px;
-      }
-      .shop-now-btn {
-        font-size: 20px;
-        padding: 20px 40px;
-        width: 95%;
-      }
-    }
   </style>
 </head>
-
 <body>
   <header>
     <img class="logo" src="logo.png" alt="Miji Mystique Logo">
@@ -155,46 +154,9 @@
 
   <img class="product-img" src="4-min.jpg" alt="Glutathione Serum">
 
-
-
   <div class="button-container">
     <button class="shop-now-btn" onclick="trackAmazonGluta()">Buy on Amazon</button>
     <button class="shop-now-btn" onclick="trackFlipkartGluta()">Buy on Flipkart</button>
-  </div>
-
-  <div style="max-width: 800px; margin: 50px auto 20px; padding: 0 15px; font-size: 16px; line-height: 1.6; color: #333;">
-    <h2 style="text-align: center; color: #a67458; font-size: 22px;">Even Skin Tone with Glutathione + Kojic Acid Serum</h2>
-
-    <p>
-      Achieve a brighter, more balanced complexion with this dermatologist-formulated serum. Designed to reduce hyperpigmentation, dark spots, and dullness, it combines powerful antioxidants for radiant skin.
-    </p>
-
-    <h3 style="color: #444; margin-top: 25px;">Why Choose Glutathione + Kojic Acid?</h3>
-    <p>
-      Glutathione is a master antioxidant that works to reduce melanin, while Kojic Acid and Alpha Arbutin target visible discoloration. Together, they leave skin visibly clearer and more luminous.
-    </p>
-    <p style="font-style: italic;">Popular search terms: skin brightening serum, glutathione for skin, kojic acid face serum, pigmentation removal, dark spot corrector.</p>
-
-    <h3 style="color: #444; margin-top: 25px;">Benefits of Glutathione Serum:</h3>
-    <ul style="padding-left: 20px;">
-      <li><strong>Reduces Pigmentation:</strong> Targets melanin to fade dark spots</li>
-      <li><strong>Evens Skin Tone:</strong> Helps correct uneven tone and dullness</li>
-      <li><strong>Brightens Complexion:</strong> Supports a natural glow</li>
-      <li><strong>Antioxidant-Rich:</strong> Fights oxidative stress and free radicals</li>
-    </ul>
-
-    <h3 style="color: #444; margin-top: 25px;">How to Use:</h3>
-    <p>
-      Use daily in the morning or evening after cleansing. Apply 2–3 drops to face and neck. Follow with moisturizer and SPF (if used during daytime).
-    </p>
-
-    <p style="margin-top: 15px;">
-      This formula is gentle on most skin types and suitable for regular use.
-    </p>
-
-    <p style="font-weight: bold; color: #222; margin-top: 20px;">
-      Illuminate your skin safely—reveal your best complexion with our Glutathione Brightening Serum.
-    </p>
   </div>
 
   <footer style="background-color: #f0e6e1; text-align: center; padding: 20px; font-size: 14px; color: #555; margin-top: 40px;">
