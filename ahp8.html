@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <title>Miji Mystique - AHP8 Peptide Serum</title>
 
-  <!-- Google tag -->
+  <!-- Google Analytics 4 (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-1K4S938EK4');
+    gtag('config', 'AW-16983040893');
   </script>
 
   <!-- Meta Pixel -->
@@ -31,26 +32,51 @@
          src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
   </noscript>
 
-  <!-- Button Event Tracking -->
   <script>
+    function gtag_report_conversion_amazon(url) {
+      var callback = function () {
+        if (typeof(url) !== 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16983040893/lvcrCMqsrLkaEP3GkqI_',
+        'event_callback': callback
+      });
+      return false;
+    }
+
+    function gtag_report_conversion_flipkart(url) {
+      var callback = function () {
+        if (typeof(url) !== 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16983040893/60m6CPusoLkaEP3GkqI_',
+        'event_callback': callback
+      });
+      return false;
+    }
+
     function trackAmazonAHP8() {
-      gtag('event', 'buy_on_amazon_ahp8', {
-        event_category: 'ecommerce',
-        event_label: 'AHP8 - Amazon',
-        value: 1
+      gtag('event', 'shop_now_click', {
+        'product_name': 'AHP8 Serum',
+        'platform': 'Amazon',
+        'destination_url': 'https://www.amazon.in/dp/B0DVC5QRDK'
       });
       fbq('trackCustom', 'BuyOnAmazonAHP8');
-      window.location.href = 'https://www.amazon.in/dp/B0DVC5QRDK';
+      return gtag_report_conversion_amazon('https://www.amazon.in/dp/B0DVC5QRDK');
     }
 
     function trackFlipkartAHP8() {
-      gtag('event', 'buy_on_flipkart_ahp8', {
-        event_category: 'ecommerce',
-        event_label: 'AHP8 - Flipkart',
-        value: 1
+      gtag('event', 'shop_now_click', {
+        'product_name': 'AHP8 Serum',
+        'platform': 'Flipkart',
+        'destination_url': 'https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S'
       });
       fbq('trackCustom', 'BuyOnFlipkartAHP8');
-      window.location.href = 'https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S';
+      return gtag_report_conversion_flipkart('https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S');
     }
   </script>
 
@@ -79,17 +105,6 @@
       height: auto;
       display: block;
       margin: 20px auto;
-    }
-    .description {
-      text-align: center;
-      margin-top: 20px;
-      font-weight: bold;
-      padding: 0 10px;
-    }
-    .description ul {
-      list-style-type: disc;
-      display: inline-block;
-      text-align: left;
     }
     .highlight-text {
       font-weight: bold;
@@ -121,24 +136,8 @@
     .shop-now-btn:hover {
       transform: scale(1.05);
     }
-
-    @media (max-width: 600px) {
-      header {
-        font-size: 12px;
-        padding: 8px 0;
-      }
-      .logo {
-        width: 50px;
-      }
-      .shop-now-btn {
-        font-size: 20px;
-        padding: 20px 40px;
-        width: 95%;
-      }
-    }
   </style>
 </head>
-
 <body>
   <header>
     <img class="logo" src="logo.png" alt="Miji Mystique Logo">
@@ -154,8 +153,6 @@
   </p>
 
   <img class="product-img" src="5-min.jpg" alt="AHP8 Serum">
-
-
 
   <div class="button-container">
     <button class="shop-now-btn" onclick="trackAmazonAHP8()">Buy on Amazon</button>
