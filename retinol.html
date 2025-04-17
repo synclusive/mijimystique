@@ -11,8 +11,6 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-1K4S938EK4');
-
-    // Google Ads Conversion ID
     gtag('config', 'AW-16983040893');
   </script>
 
@@ -37,22 +35,42 @@
   <!-- Custom JS Events -->
   <script>
     function trackAmazonRetinol() {
+      // Fire common Checkout event
+      fbq('track', 'Checkout', {
+        content_name: 'Retinol Serum',
+        platform: 'Amazon'
+      });
+      // Fire specific event
+      fbq('trackCustom', 'BuyOnAmazonRetinol');
+
+      // Google Event
       gtag('event', 'shop_now_click', {
         'product_name': 'Retinol Serum',
         'platform': 'Amazon',
         'destination_url': 'https://www.amazon.in/dp/B0DVC7QM1L'
       });
-      fbq('trackCustom', 'BuyOnAmazonRetinol');
+
+      // Google Ads Conversion
       return gtag_report_conversion_amazon('https://www.amazon.in/dp/B0DVC7QM1L');
     }
 
     function trackFlipkartRetinol() {
+      // Fire common Checkout event
+      fbq('track', 'Checkout', {
+        content_name: 'Retinol Serum',
+        platform: 'Flipkart'
+      });
+      // Fire specific event
+      fbq('trackCustom', 'BuyOnFlipkartRetinol');
+
+      // Google Event
       gtag('event', 'shop_now_click', {
         'product_name': 'Retinol Serum',
         'platform': 'Flipkart',
         'destination_url': 'https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU'
       });
-      fbq('trackCustom', 'BuyOnFlipkartRetinol');
+
+      // Google Ads Conversion
       return gtag_report_conversion_flipkart('https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU');
     }
 
@@ -217,3 +235,4 @@
   </footer>
 </body>
 </html>
+
