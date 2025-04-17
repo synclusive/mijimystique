@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Miji Mystique - Glutathione Serum</title>
 
-  <!-- Google Analytics 4 (gtag.js) -->
+  <!-- Google Analytics 4 and Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -32,6 +32,7 @@
          src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
   </noscript>
 
+  <!-- Custom Event Tracking -->
   <script>
     function gtag_report_conversion_amazon(url) {
       var callback = function () {
@@ -60,22 +61,42 @@
     }
 
     function trackAmazonGluta() {
+      // Fire common Checkout event
+      fbq('track', 'Checkout', {
+        content_name: 'Glutathione Serum',
+        platform: 'Amazon'
+      });
+
+      // Fire specific event
+      fbq('trackCustom', 'BuyOnAmazonGlutathione');
+
+      // Google Analytics event
       gtag('event', 'shop_now_click', {
         'product_name': 'Glutathione Serum',
         'platform': 'Amazon',
         'destination_url': 'https://www.amazon.in/dp/B0DVC5KD7W'
       });
-      fbq('trackCustom', 'BuyOnAmazonGlutathione');
+
       return gtag_report_conversion_amazon('https://www.amazon.in/dp/B0DVC5KD7W');
     }
 
     function trackFlipkartGluta() {
+      // Fire common Checkout event
+      fbq('track', 'Checkout', {
+        content_name: 'Glutathione Serum',
+        platform: 'Flipkart'
+      });
+
+      // Fire specific event
+      fbq('trackCustom', 'BuyOnFlipkartGlutathione');
+
+      // Google Analytics event
       gtag('event', 'shop_now_click', {
         'product_name': 'Glutathione Serum',
         'platform': 'Flipkart',
         'destination_url': 'https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA'
       });
-      fbq('trackCustom', 'BuyOnFlipkartGlutathione');
+
       return gtag_report_conversion_flipkart('https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA');
     }
   </script>
@@ -138,6 +159,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <img class="logo" src="logo.png" alt="Miji Mystique Logo">
@@ -170,6 +192,7 @@
     <p>
       Glutathione is a master antioxidant that works to reduce melanin, while Kojic Acid and Alpha Arbutin target visible discoloration. Together, they leave skin visibly clearer and more luminous.
     </p>
+
     <p style="font-style: italic;">Popular search terms: skin brightening serum, glutathione for skin, kojic acid face serum, pigmentation removal, dark spot corrector.</p>
 
     <h3 style="color: #444; margin-top: 25px;">Benefits of Glutathione Serum:</h3>
