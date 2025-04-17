@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Miji Mystique - Product Showcase</title>
+  <title>Miji Mystique - Product</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     img.product-image {
@@ -22,23 +22,7 @@
     gtag('config', 'G-1K4S938EK4');
   </script>
 
-  <!-- Google Ads Outbound Click Conversion -->
-  <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-16983040893/bcBICMqD6bUaEP3GkqI_',
-          'event_callback': callback
-      });
-      return false;
-    }
-  </script>
-
-  <!-- Meta Pixel Code -->
+  <!-- Facebook Pixel and Button Tracking -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -50,12 +34,36 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '630696149944730');
     fbq('track', 'PageView');
+
+    function report_viewcontent_and_conversion(url) {
+      fbq('track', 'ViewContent');
+      var callback = function () {
+        if (typeof(url) !== 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16983040893/bcBICMqD6bUaEP3GkqI_',
+        'event_callback': callback
+      });
+
+      // Safety net: force redirect after 300ms in case trackers are blocked
+      setTimeout(function() {
+        if (typeof(url) !== 'undefined') {
+          window.location = url;
+        }
+      }, 300);
+
+      return false;
+    }
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
+  </noscript>
 </head>
+
 <body class="bg-white text-gray-800">
   <header class="bg-gray-900 text-white p-4 flex items-center justify-center gap-4">
     <img src="logo.png" alt="Miji Mystique Logo" class="w-10 h-10 rounded-full">
@@ -63,6 +71,7 @@
   </header>
 
   <section class="p-4 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+
     <!-- Retinol -->
     <div class="border rounded-xl p-4 shadow hover:shadow-md transition">
       <h2 class="text-xl font-bold mb-2 text-center">2% Retinol Vitamin A Face Serum</h2>
@@ -71,17 +80,15 @@
         <li>Reduces wrinkles & fine lines</li>
         <li>Boosts collagen & skin renewal</li>
         <li>Improves texture & tone</li>
-        <li>Boosts Skin Renewal</li>
         <li>Brightens & Evens Skin Tone</li>
-        <li>Improves Skin Texture</li>
         <li>Reduces Blemishes & Breakouts</li>
         <li>Hydrates & Nourishes</li>
         <li>Gentle Yet Effective</li>
         <li>Enhances Skin Firmness</li>
       </ul>
       <div class="text-center mt-8">
-        <a href="https://synclusive.github.io/mijimystique/retinol" onclick="return gtag_report_conversion('https://synclusive.github.io/mijimystique/retinol')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
-          Shop Now
+        <a href="https://synclusive.github.io/mijimystique/retinol" onclick="return report_viewcontent_and_conversion('https://synclusive.github.io/mijimystique/retinol')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
+          View Product
         </a>
       </div>
     </div>
@@ -97,14 +104,13 @@
         <li>Improves clarity & radiance</li>
         <li>Fades dark spots & blemishes</li>
         <li>Supports even complexion</li>
-        <li>Gentle on sensitive skin</li>
         <li>Reduces melanin production</li>
         <li>Combats oxidative stress</li>
         <li>Daily-use brightening formula</li>
       </ul>
       <div class="text-center mt-8">
-        <a href="https://synclusive.github.io/mijimystique/gluta" onclick="return gtag_report_conversion('https://synclusive.github.io/mijimystique/gluta')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
-          Shop Now
+        <a href="https://synclusive.github.io/mijimystique/gluta" onclick="return report_viewcontent_and_conversion('https://synclusive.github.io/mijimystique/gluta')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
+          View Product
         </a>
       </div>
     </div>
@@ -126,8 +132,8 @@
         <li>Daily energizing formula</li>
       </ul>
       <div class="text-center mt-8">
-        <a href="https://synclusive.github.io/mijimystique/vitc" onclick="return gtag_report_conversion('https://synclusive.github.io/mijimystique/vitc')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
-          Shop Now
+        <a href="https://synclusive.github.io/mijimystique/vitc" onclick="return report_viewcontent_and_conversion('https://synclusive.github.io/mijimystique/vitc')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
+          View Product
         </a>
       </div>
     </div>
@@ -149,11 +155,12 @@
         <li>Plumps and rejuvenates skin</li>
       </ul>
       <div class="text-center mt-8">
-        <a href="https://synclusive.github.io/mijimystique/ahp8" onclick="return gtag_report_conversion('https://synclusive.github.io/mijimystique/ahp8')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
-          Shop Now
+        <a href="https://synclusive.github.io/mijimystique/ahp8" onclick="return report_viewcontent_and_conversion('https://synclusive.github.io/mijimystique/ahp8')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
+          View Product
         </a>
       </div>
     </div>
+
   </section>
 
   <footer class="bg-pink-100 p-4 text-center text-sm mt-10">
