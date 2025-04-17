@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Miji Mystique - AHP8 Peptide Serum</title>
 
-  <!-- Google Analytics 4 (gtag.js) -->
+  <!-- Google Analytics 4 and Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -32,6 +32,7 @@
          src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
   </noscript>
 
+  <!-- Custom Event Tracking -->
   <script>
     function gtag_report_conversion_amazon(url) {
       var callback = function () {
@@ -60,22 +61,42 @@
     }
 
     function trackAmazonAHP8() {
+      // Common checkout event
+      fbq('track', 'Checkout', {
+        content_name: 'AHP8 Serum',
+        platform: 'Amazon'
+      });
+
+      // Specific event
+      fbq('trackCustom', 'BuyOnAmazonAHP8');
+
+      // Google Analytics event
       gtag('event', 'shop_now_click', {
         'product_name': 'AHP8 Serum',
         'platform': 'Amazon',
         'destination_url': 'https://www.amazon.in/dp/B0DVC5QRDK'
       });
-      fbq('trackCustom', 'BuyOnAmazonAHP8');
+
       return gtag_report_conversion_amazon('https://www.amazon.in/dp/B0DVC5QRDK');
     }
 
     function trackFlipkartAHP8() {
+      // Common checkout event
+      fbq('track', 'Checkout', {
+        content_name: 'AHP8 Serum',
+        platform: 'Flipkart'
+      });
+
+      // Specific event
+      fbq('trackCustom', 'BuyOnFlipkartAHP8');
+
+      // Google Analytics event
       gtag('event', 'shop_now_click', {
         'product_name': 'AHP8 Serum',
         'platform': 'Flipkart',
         'destination_url': 'https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S'
       });
-      fbq('trackCustom', 'BuyOnFlipkartAHP8');
+
       return gtag_report_conversion_flipkart('https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S');
     }
   </script>
@@ -138,6 +159,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <img class="logo" src="logo.png" alt="Miji Mystique Logo">
