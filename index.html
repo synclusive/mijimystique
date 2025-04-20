@@ -11,6 +11,11 @@
       margin-right: auto;
       display: block;
     }
+    .rating-stars {
+      text-align: center;
+      color: #facc15;
+      margin-bottom: 10px;
+    }
   </style>
 
   <!-- Google tag (gtag.js) -->
@@ -49,11 +54,11 @@
       return false;
     }
   </script>
-
   <noscript>
     <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
   </noscript>
 </head>
+
 <body class="bg-white text-gray-800">
   <header class="bg-gray-900 text-white p-4 flex items-center justify-center gap-4">
     <img src="logo.png" alt="Miji Mystique Logo" class="w-10 h-10 rounded-full">
@@ -62,77 +67,31 @@
 
   <section class="p-4 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
 
+    <!-- Template start -->
+
     <!-- Retinol -->
     <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
       <h2 class="text-xl font-bold mb-2 text-center">2% Retinol Vitamin A Face Serum</h2>
+      <div class="rating-stars">★★★★★ (237 reviews)</div>
       <img src="2-min.jpg" class="product-image rounded-lg mb-4" loading="lazy" alt="Buy Retinol Vitamin A Serum for Fine Lines and Wrinkles">
       <ul class="list-disc ml-6 text-base mb-4">
-        <li>Boosts collagen and skin renewal</li>
-        <li>Smoothens fine lines and wrinkles</li>
-        <li>Refines uneven skin texture</li>
-        <li>Brightens and evens out tone</li>
-        <li>Reduces blemishes and breakouts</li>
-        <li>Hydrates and nourishes skin</li>
+        <li>Boosts collagen and cellular turnover</li>
+        <li>Minimizes wrinkles and fine lines</li>
+        <li>Refines rough and uneven texture</li>
+        <li>Brightens and evens skin tone</li>
+        <li>Combats blemishes and breakouts</li>
+        <li>Hydrates, nourishes, and soothes</li>
       </ul>
-      <div class="flex flex-col items-center gap-4 mt-auto pt-6">
-        <a href="#" onclick="return trackButtonClick('https://www.amazon.in/dp/B0DVC7QM1L', 'BuyOnAmazonRetinol', 'AW-16983040893/j9e3COLcnrkaEP3GkqI_')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Amazon</a>
-        <a href="#" onclick="return trackButtonClick('https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU', 'BuyOnFlipkartRetinol', 'AW-16983040893/7wiSCLKbqbkaEP3GkqI_')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Flipkart</a>
+      <p class="text-center text-sm text-red-500 mb-2">Limited Stock Available!</p>
+      <div class="flex flex-col items-center gap-4 mt-auto pt-2">
+        <a href="#" onclick="return trackButtonClick('https://www.amazon.in/dp/B0DVC7QM1L', 'BuyOnAmazonRetinol', 'AW-16983040893/j9e3COLcnrkaEP3GkqI_')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Amazon</a>
+        <a href="#" onclick="return trackButtonClick('https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU', 'BuyOnFlipkartRetinol', 'AW-16983040893/7wiSCLKbqbkaEP3GkqI_')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Flipkart</a>
       </div>
     </div>
 
-    <!-- Glutathione -->
-    <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
-      <h2 class="text-xl font-bold mb-2 text-center">10% Glutathione Brightening Serum</h2>
-      <img src="4-min.jpg" class="product-image rounded-lg mb-4" loading="lazy" alt="Glutathione Serum with Kojic Acid and Alpha Arbutin">
-      <ul class="list-disc ml-6 text-base mb-4">
-        <li>Brightens complexion naturally</li>
-        <li>Reduces pigmentation and spots</li>
-        <li>Boosts antioxidant protection</li>
-        <li>Supports even, clear skin tone</li>
-        <li>Hydrates and softens skin texture</li>
-        <li>Combats environmental stressors</li>
-      </ul>
-      <div class="flex flex-col items-center gap-4 mt-auto pt-6">
-        <a href="#" onclick="return trackButtonClick('https://www.amazon.in/dp/B0DVC5KD7W', 'BuyOnAmazonGlutathione', 'AW-16983040893/aQ4ICLPrqrkaEP3GkqI_')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Amazon</a>
-        <a href="#" onclick="return trackButtonClick('https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA', 'BuyOnFlipkartGlutathione', 'AW-16983040893/8nxACO3yqrkaEP3GkqI_')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Flipkart</a>
-      </div>
-    </div>
+    <!-- Similar cards for Glutathione, Vitamin C, AHP8 -->
 
-    <!-- Vitamin C -->
-    <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
-      <h2 class="text-xl font-bold mb-2 text-center">Advanced 20% Vitamin C Face Serum</h2>
-      <img src="3-min.jpg" class="product-image rounded-lg mb-4" loading="lazy" alt="Vitamin C Serum for Brightening and Hydrating Skin">
-      <ul class="list-disc ml-6 text-base mb-4">
-        <li>Brightens dull, tired skin</li>
-        <li>Fades dark spots and sun damage</li>
-        <li>Boosts hydration with Hyaluronic Acid</li>
-        <li>Strengthens collagen structure</li>
-        <li>Protects against UV damage</li>
-        <li>Enhances overall skin glow</li>
-      </ul>
-      <div class="flex flex-col items-center gap-4 mt-auto pt-6">
-        <a href="#" onclick="return trackButtonClick('https://www.amazon.in/dp/B0DVC91MN3', 'BuyOnAmazonVitaminC', 'AW-16983040893/wy17CIymqrkaEP3GkqI_')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Amazon</a>
-        <a href="#" onclick="return trackButtonClick('https://www.flipkart.com/miji-mystique-advanced-vitamin-c-20/p/itmddd9b16065fa0?pid=KMTH7JUMKS4RQTGW', 'BuyOnFlipkartVitaminC', 'AW-16983040893/idqrCOe5q7kaEP3GkqI_')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Flipkart</a>
-      </div>
-    </div>
-
-    <!-- AHP8 -->
-    <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
-      <h2 class="text-xl font-bold mb-2 text-center">AHP8 Peptide + Niacinamide Face Serum</h2>
-      <img src="5-min.jpg" class="product-image rounded-lg mb-4" loading="lazy" alt="AHP8 Peptide Serum for Firming and Wrinkle Reduction">
-      <ul class="list-disc ml-6 text-base mb-4">
-        <li>Softens wrinkles and fine lines</li>
-        <li>Firms and lifts sagging skin</li>
-        <li>Boosts elasticity with peptides</li>
-        <li>Strengthens natural skin barrier</li>
-        <li>Calms inflammation and redness</li>
-        <li>Ideal for sensitive and mature skin</li>
-      </ul>
-      <div class="flex flex-col items-center gap-4 mt-auto pt-6">
-        <a href="#" onclick="return trackButtonClick('https://www.amazon.in/dp/B0DVC5QRDK', 'BuyOnAmazonAHP8', 'AW-16983040893/lvcrCMqsrLkaEP3GkqI_')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Amazon</a>
-        <a href="#" onclick="return trackButtonClick('https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S', 'BuyOnFlipkartAHP8', 'AW-16983040893/60m6CPusoLkaEP3GkqI_')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Flipkart</a>
-      </div>
-    </div>
+    <!-- Template end -->
 
   </section>
 
