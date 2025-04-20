@@ -34,39 +34,25 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '630696149944730');
     fbq('track', 'PageView');
+
+    function trackButtonClick(url, fbEventName, gAdsId) {
+      fbq('track', 'ViewContent');
+      fbq('track', 'Checkout');
+      fbq('trackCustom', fbEventName);
+      gtag('event', 'conversion', {
+        'send_to': gAdsId,
+        'event_callback': function() {
+          window.location = url;
+        }
+      });
+      setTimeout(function() { window.location = url; }, 300);
+      return false;
+    }
   </script>
+
   <noscript>
     <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
   </noscript>
-
-  <!-- Custom Redirect Functions -->
-  <script>
-    function redirect_amazon(url, eventName) {
-      fbq('track', 'ViewContent');
-      fbq('trackCustom', eventName);
-      gtag('event', 'conversion', {
-        'send_to': 'AW-16983040893/bcBICMqD6bUaEP3GkqI_',
-        'event_callback': function() {
-          window.location = url;
-        }
-      });
-      setTimeout(function() { window.location = url; }, 300);
-      return false;
-    }
-
-    function redirect_flipkart(url, eventName) {
-      fbq('track', 'ViewContent');
-      fbq('trackCustom', eventName);
-      gtag('event', 'conversion', {
-        'send_to': 'AW-16983040893/bcBICMqD6bUaEP3GkqI_',
-        'event_callback': function() {
-          window.location = url;
-        }
-      });
-      setTimeout(function() { window.location = url; }, 300);
-      return false;
-    }
-  </script>
 </head>
 <body class="bg-white text-gray-800">
   <header class="bg-gray-900 text-white p-4 flex items-center justify-center gap-4">
@@ -87,8 +73,8 @@
         <li>Brightens & Evens Skin Tone</li>
       </ul>
       <div class="flex flex-col items-center gap-4 mt-auto pt-6">
-        <a href="#" onclick="return redirect_amazon('https://www.amazon.in/dp/B0DVC7QM1L', 'BuyOnAmazonRetinol')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Amazon</a>
-        <a href="#" onclick="return redirect_flipkart('https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU', 'BuyOnFlipkartRetinol')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Flipkart</a>
+        <a href="#" onclick="return trackButtonClick('https://www.amazon.in/dp/B0DVC7QM1L', 'BuyOnAmazonRetinol', 'AW-16983040893/j9e3COLcnrkaEP3GkqI_')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Amazon</a>
+        <a href="#" onclick="return trackButtonClick('https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU', 'BuyOnFlipkartRetinol', 'AW-16983040893/7wiSCLKbqbkaEP3GkqI_')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Flipkart</a>
       </div>
     </div>
 
@@ -103,8 +89,8 @@
         <li>Improves clarity & radiance</li>
       </ul>
       <div class="flex flex-col items-center gap-4 mt-auto pt-6">
-        <a href="#" onclick="return redirect_amazon('https://www.amazon.in/dp/B0DVC5KD7W', 'BuyOnAmazonGlutathione')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Amazon</a>
-        <a href="#" onclick="return redirect_flipkart('https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA', 'BuyOnFlipkartGlutathione')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Flipkart</a>
+        <a href="#" onclick="return trackButtonClick('https://www.amazon.in/dp/B0DVC5KD7W', 'BuyOnAmazonGlutathione', 'AW-16983040893/aQ4ICLPrqrkaEP3GkqI_')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Amazon</a>
+        <a href="#" onclick="return trackButtonClick('https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA', 'BuyOnFlipkartGlutathione', 'AW-16983040893/8nxACO3yqrkaEP3GkqI_')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Flipkart</a>
       </div>
     </div>
 
@@ -119,8 +105,8 @@
         <li>Hydrates and refreshes skin</li>
       </ul>
       <div class="flex flex-col items-center gap-4 mt-auto pt-6">
-        <a href="#" onclick="return redirect_amazon('https://www.amazon.in/dp/B0DVC91MN3', 'BuyOnAmazonVitaminC')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Amazon</a>
-        <a href="#" onclick="return redirect_flipkart('https://www.flipkart.com/miji-mystique-advanced-vitamin-c-20/p/itmddd9b16065fa0?pid=KMTH7JUMKS4RQTGW', 'BuyOnFlipkartVitaminC')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Flipkart</a>
+        <a href="#" onclick="return trackButtonClick('https://www.amazon.in/dp/B0DVC91MN3', 'BuyOnAmazonVitaminC', 'AW-16983040893/wy17CIymqrkaEP3GkqI_')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Amazon</a>
+        <a href="#" onclick="return trackButtonClick('https://www.flipkart.com/miji-mystique-advanced-vitamin-c-20/p/itmddd9b16065fa0?pid=KMTH7JUMKS4RQTGW', 'BuyOnFlipkartVitaminC', 'AW-16983040893/idqrCOe5q7kaEP3GkqI_')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Flipkart</a>
       </div>
     </div>
 
@@ -135,8 +121,8 @@
         <li>Targets crow’s feet & smile lines</li>
       </ul>
       <div class="flex flex-col items-center gap-4 mt-auto pt-6">
-        <a href="#" onclick="return redirect_amazon('https://www.amazon.in/dp/B0DVC5QRDK', 'BuyOnAmazonAHP8')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Amazon</a>
-        <a href="#" onclick="return redirect_flipkart('https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S', 'BuyOnFlipkartAHP8')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Flipkart</a>
+        <a href="#" onclick="return trackButtonClick('https://www.amazon.in/dp/B0DVC5QRDK', 'BuyOnAmazonAHP8', 'AW-16983040893/lvcrCMqsrLkaEP3GkqI_')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Amazon</a>
+        <a href="#" onclick="return trackButtonClick('https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S', 'BuyOnFlipkartAHP8', 'AW-16983040893/60m6CPusoLkaEP3GkqI_')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Shop on Flipkart</a>
       </div>
     </div>
 
