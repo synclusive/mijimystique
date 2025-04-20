@@ -22,7 +22,7 @@
     gtag('config', 'G-1K4S938EK4');
   </script>
 
-  <!-- Facebook Pixel and Button Tracking -->
+  <!-- Facebook Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -34,31 +34,40 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '630696149944730');
     fbq('track', 'PageView');
-
-    function report_viewcontent_and_conversion(url) {
-      fbq('track', 'ViewContent');
-      var callback = function () {
-        if (typeof(url) !== 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-        'send_to': 'AW-16983040893/bcBICMqD6bUaEP3GkqI_',
-        'event_callback': callback
-      });
-      setTimeout(function() {
-        if (typeof(url) !== 'undefined') {
-          window.location = url;
-        }
-      }, 300);
-      return false;
-    }
   </script>
-
   <noscript>
     <img height="1" width="1" style="display:none"
          src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
   </noscript>
+
+  <!-- Custom Redirect Functions -->
+  <script>
+    function redirect_amazon(url, eventName) {
+      fbq('track', 'ViewContent');
+      fbq('trackCustom', eventName);
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16983040893/bcBICMqD6bUaEP3GkqI_',
+        'event_callback': function() {
+          window.location = url;
+        }
+      });
+      setTimeout(function() { window.location = url; }, 300);
+      return false;
+    }
+
+    function redirect_flipkart(url, eventName) {
+      fbq('track', 'ViewContent');
+      fbq('trackCustom', eventName);
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16983040893/bcBICMqD6bUaEP3GkqI_',
+        'event_callback': function() {
+          window.location = url;
+        }
+      });
+      setTimeout(function() { window.location = url; }, 300);
+      return false;
+    }
+  </script>
 </head>
 
 <body class="bg-white text-gray-800">
@@ -68,28 +77,20 @@
   </header>
 
   <section class="p-4 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-    
+
     <!-- Retinol -->
     <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
       <h2 class="text-xl font-bold mb-2 text-center">2% Retinol Vitamin A Face Serum</h2>
       <img src="2-min.jpg" class="product-image rounded-lg mb-4" alt="Retinol Image">
-      
-      <div class="flex flex-col justify-between flex-grow">
-        <ul class="list-disc ml-6 text-base mb-4">
-          <li>Reduces wrinkles & fine lines</li>
-          <li>Boosts collagen & skin renewal</li>
-          <li>Improves texture & tone</li>
-          <li>Brightens & Evens Skin Tone</li>
-          <li>Reduces Blemishes & Breakouts</li>
-          <li>Hydrates & Nourishes</li>
-          <li>Gentle Yet Effective</li>
-          <li>Enhances Skin Firmness</li>
-        </ul>
-        <div class="text-center mt-auto pt-6">
-          <a href="https://synclusive.github.io/mijimystique/retinol" onclick="return report_viewcontent_and_conversion('https://synclusive.github.io/mijimystique/retinol')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
-            View Product
-          </a>
-        </div>
+      <ul class="list-disc ml-6 text-base mb-4">
+        <li>Reduces wrinkles & fine lines</li>
+        <li>Boosts collagen & skin renewal</li>
+        <li>Improves texture & tone</li>
+        <li>Brightens & Evens Skin Tone</li>
+      </ul>
+      <div class="flex flex-col items-center gap-4 mt-auto pt-6">
+        <a href="#" onclick="return redirect_amazon('https://www.amazon.in/dp/B0DVC7QM1L', 'BuyOnAmazonRetinol')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Buy on Amazon</a>
+        <a href="#" onclick="return redirect_flipkart('https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU', 'BuyOnFlipkartRetinol')" class="bg-yellow-500 hover:bg-yellow-600 text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Buy on Flipkart</a>
       </div>
     </div>
 
@@ -97,24 +98,15 @@
     <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
       <h2 class="text-xl font-bold mb-2 text-center">10% Glutathione with Kojic Acid & Alpha Arbutin</h2>
       <img src="4-min.jpg" class="product-image rounded-lg mb-4" alt="Glutathione Image">
-      
-      <div class="flex flex-col justify-between flex-grow">
-        <ul class="list-disc ml-6 text-base mb-4">
-          <li>Brightens skin & fades pigmentation</li>
-          <li>Evens out skin tone</li>
-          <li>Antioxidant-rich & hydrating</li>
-          <li>Improves clarity & radiance</li>
-          <li>Fades dark spots & blemishes</li>
-          <li>Supports even complexion</li>
-          <li>Reduces melanin production</li>
-          <li>Combats oxidative stress</li>
-          <li>Daily-use brightening formula</li>
-        </ul>
-        <div class="text-center mt-auto pt-6">
-          <a href="https://synclusive.github.io/mijimystique/gluta" onclick="return report_viewcontent_and_conversion('https://synclusive.github.io/mijimystique/gluta')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
-            View Product
-          </a>
-        </div>
+      <ul class="list-disc ml-6 text-base mb-4">
+        <li>Brightens skin & fades pigmentation</li>
+        <li>Evens out skin tone</li>
+        <li>Antioxidant-rich & hydrating</li>
+        <li>Improves clarity & radiance</li>
+      </ul>
+      <div class="flex flex-col items-center gap-4 mt-auto pt-6">
+        <a href="#" onclick="return redirect_amazon('https://www.amazon.in/dp/B0DVC5KD7W', 'BuyOnAmazonGlutathione')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Buy on Amazon</a>
+        <a href="#" onclick="return redirect_flipkart('https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA', 'BuyOnFlipkartGlutathione')" class="bg-yellow-500 hover:bg-yellow-600 text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Buy on Flipkart</a>
       </div>
     </div>
 
@@ -122,25 +114,15 @@
     <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
       <h2 class="text-xl font-bold mb-2 text-center">Advanced 20% Vitamin C Face Serum</h2>
       <img src="3-min.jpg" class="product-image rounded-lg mb-4" alt="Vitamin C Image">
-      
-      <div class="flex flex-col justify-between flex-grow">
-        <ul class="list-disc ml-6 text-base mb-4">
-          <li>Boosts radiance & glow</li>
-          <li>Fades dark spots & sun damage</li>
-          <li>Supports collagen production</li>
-          <li>Improves skin brightness</li>
-          <li>Reduces dullness</li>
-          <li>Protects against UV damage</li>
-          <li>Hydrates and refreshes skin</li>
-          <li>Promotes smooth skin texture</li>
-          <li>Rich in antioxidants</li>
-          <li>Daily energizing formula</li>
-        </ul>
-        <div class="text-center mt-auto pt-6">
-          <a href="https://synclusive.github.io/mijimystique/vitc" onclick="return report_viewcontent_and_conversion('https://synclusive.github.io/mijimystique/vitc')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
-            View Product
-          </a>
-        </div>
+      <ul class="list-disc ml-6 text-base mb-4">
+        <li>Boosts radiance & glow</li>
+        <li>Fades dark spots & sun damage</li>
+        <li>Supports collagen production</li>
+        <li>Hydrates and refreshes skin</li>
+      </ul>
+      <div class="flex flex-col items-center gap-4 mt-auto pt-6">
+        <a href="#" onclick="return redirect_amazon('https://www.amazon.in/dp/B0DVC91MN3', 'BuyOnAmazonVitaminC')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Buy on Amazon</a>
+        <a href="#" onclick="return redirect_flipkart('https://www.flipkart.com/miji-mystique-advanced-vitamin-c-20/p/itmddd9b16065fa0?pid=KMTH7JUMKS4RQTGW', 'BuyOnFlipkartVitaminC')" class="bg-yellow-500 hover:bg-yellow-600 text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Buy on Flipkart</a>
       </div>
     </div>
 
@@ -148,25 +130,15 @@
     <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
       <h2 class="text-xl font-bold mb-2 text-center">AHP8 Peptide Face Serum</h2>
       <img src="5-min.jpg" class="product-image rounded-lg mb-4" alt="AHP8 Image">
-      
-      <div class="flex flex-col justify-between flex-grow">
-        <ul class="list-disc ml-6 text-base mb-4">
-          <li>Reduces wrinkles & expression lines</li>
-          <li>Firms and lifts skin</li>
-          <li>Peptide-rich anti-aging formula</li>
-          <li>Softens forehead lines</li>
-          <li>Enhances elasticity</li>
-          <li>Improves skin texture</li>
-          <li>Hydrating & non-greasy</li>
-          <li>Safe for daily use</li>
-          <li>Targets crow’s feet & smile lines</li>
-          <li>Plumps and rejuvenates skin</li>
-        </ul>
-        <div class="text-center mt-auto pt-6">
-          <a href="https://synclusive.github.io/mijimystique/ahp8" onclick="return report_viewcontent_and_conversion('https://synclusive.github.io/mijimystique/ahp8')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-4 px-10 rounded w-full max-w-xs mx-auto">
-            View Product
-          </a>
-        </div>
+      <ul class="list-disc ml-6 text-base mb-4">
+        <li>Reduces wrinkles & expression lines</li>
+        <li>Firms and lifts skin</li>
+        <li>Peptide-rich anti-aging formula</li>
+        <li>Targets crow’s feet & smile lines</li>
+      </ul>
+      <div class="flex flex-col items-center gap-4 mt-auto pt-6">
+        <a href="#" onclick="return redirect_amazon('https://www.amazon.in/dp/B0DVC5QRDK', 'BuyOnAmazonAHP8')" class="bg-pink-500 hover:bg-pink-600 text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Buy on Amazon</a>
+        <a href="#" onclick="return redirect_flipkart('https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S', 'BuyOnFlipkartAHP8')" class="bg-yellow-500 hover:bg-yellow-600 text-white text-base font-semibold py-3 px-10 rounded w-full max-w-xs text-center">Buy on Flipkart</a>
       </div>
     </div>
 
