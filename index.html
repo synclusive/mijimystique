@@ -1,126 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Miji Mystique - Product</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    img.product-image {
-      width: 70%;
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-    }
-    .rating-stars {
-      text-align: center;
-      color: #facc15;
-      margin-bottom: 10px;
-    }
-    .benefits {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 14px;
-    }
-    .benefit-icons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 10px;
-      font-size: 12px;
-    }
-    .benefit-icons div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 80px;
-    }
-  </style>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-1K4S938EK4');
-  </script>
-
-  <!-- Facebook Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '630696149944730');
-    fbq('track', 'PageView');
-
-    function trackButtonClick(url, fbEventName, gAdsId) {
-      fbq('track', 'ViewContent');
-      fbq('track', 'Checkout');
-      fbq('trackCustom', fbEventName);
-      gtag('event', 'conversion', {
-        'send_to': gAdsId,
-        'event_callback': function() { window.location = url; }
-      });
-      setTimeout(function() { window.location = url; }, 300);
-      return false;
-    }
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
-  </noscript>
-</head>
-<body class="bg-white text-gray-800">
-
-<header class="bg-gray-900 text-white p-4 flex items-center justify-center gap-4">
-  <img src="logo.png" alt="Miji Mystique Logo" class="w-10 h-10 rounded-full">
-  <h1 class="text-2xl font-bold">Miji Mystique – Product Collection</h1>
-</header>
-
+<!-- Full HTML continued with AHP8 product -->
 <section class="p-4 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
 
-  <!-- Retinol -->
+  <!-- Previous products already added here -->
+
+  <!-- AHP8 -->
   <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
-    <h2 class="text-xl font-bold mb-2 text-center">2% Retinol Vitamin A Face Serum</h2>
-    <div class="rating-stars">★★★★★ (237 reviews)</div>
-    <img src="2-min.jpg" class="product-image rounded-lg mb-4" loading="lazy" alt="Retinol Serum for Fine Lines and Wrinkles">
+    <h2 class="text-xl font-bold mb-2 text-center">AHP8 Peptide + Niacinamide Face Serum</h2>
+    <div class="rating-stars">★★★★★ (175 reviews)</div>
+    <img src="5-min.jpg" class="product-image rounded-lg mb-4" loading="lazy" alt="Peptide Serum for Wrinkle Reduction and Firm Skin">
     <ul class="list-disc ml-6 text-base mb-4">
-      <li>Boosts collagen and cell turnover</li>
-      <li>Reduces fine lines & wrinkles</li>
-      <li>Fades dark spots & pigmentation</li>
-      <li>Refines skin texture & pores</li>
-      <li>Hydrates & nourishes deeply</li>
-      <li>Improves firmness & elasticity</li>
+      <li>Softens forehead & smile lines</li>
+      <li>Firms and lifts sagging skin</li>
+      <li>Improves elasticity and strength</li>
+      <li>Reduces redness & inflammation</li>
+      <li>Enhances skin barrier function</li>
+      <li>Hydrates without greasiness</li>
     </ul>
     <p class="text-center text-sm text-red-500 mb-2">Limited Stock Available!</p>
     <div class="flex flex-col items-center gap-4 mt-auto pt-2">
-      <a href="#" onclick="return trackButtonClick('https://www.amazon.in/dp/B0DVC7QM1L', 'BuyOnAmazonRetinol', 'AW-16983040893/j9e3COLcnrkaEP3GkqI_')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Unlock Glow on Amazon</a>
-      <a href="#" onclick="return trackButtonClick('https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU', 'BuyOnFlipkartRetinol', 'AW-16983040893/7wiSCLKbqbkaEP3GkqI_')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Get Glow on Flipkart</a>
+      <a href="#" onclick="return trackButtonClick('https://www.amazon.in/dp/B0DVC5QRDK', 'BuyOnAmazonAHP8', 'AW-16983040893/lvcrCMqsrLkaEP3GkqI_')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Firm Up on Amazon</a>
+      <a href="#" onclick="return trackButtonClick('https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S', 'BuyOnFlipkartAHP8', 'AW-16983040893/60m6CPusoLkaEP3GkqI_')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Firm Skin on Flipkart</a>
     </div>
     <div class="benefits">
       <div class="benefit-icons">
         <div>
-          <span>✨</span>
-          <span>Boosts Glow</span>
+          <span>💪</span>
+          <span>Firms Skin</span>
         </div>
         <div>
-          <span>🌟</span>
-          <span>Fades Wrinkles</span>
+          <span>🧴</span>
+          <span>Repairs Barrier</span>
         </div>
         <div>
           <span>💧</span>
-          <span>Deep Hydration</span>
+          <span>Deep Moisture</span>
         </div>
       </div>
       <p class="text-green-600 text-sm mt-2">100% Authentic & Dermatologist Tested</p>
     </div>
   </div>
-
-  <!-- You can now copy the same pattern for other products (Glutathione, Vitamin C, AHP8) -->
 
 </section>
 
