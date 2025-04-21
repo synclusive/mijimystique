@@ -5,67 +5,24 @@
   <title>Miji Mystique - Product Collection</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    img.product-image {
-      width: 70%;
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-    }
-    .rating-stars {
-      text-align: center;
-      color: #facc15;
-      margin-bottom: 10px;
-    }
-    .benefits {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 14px;
-    }
-    .benefit-icons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 10px;
-      font-size: 12px;
-    }
-    .benefit-icons div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 80px;
-    }
+    img.product-image { width: 70%; margin-left: auto; margin-right: auto; display: block; }
+    .rating-stars { text-align: center; color: #facc15; margin-bottom: 10px; }
+    li { font-weight: 600; }
+    .shop-now-btn { font-size: 20px; font-weight: 700; padding: 18px 55px; border-radius: 9999px; }
+    .sticky-cta { position: fixed; bottom: 0; left: 0; width: 100%; background-color: #ff4500; color: white; text-align: center; font-size: 18px; font-weight: 700; padding: 12px 0; z-index: 50; box-shadow: 0 -2px 8px rgba(0,0,0,0.2); }
+    @media (min-width: 768px) { .sticky-cta { display: none; } }
   </style>
-
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
+  <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-1K4S938EK4'); </script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-1K4S938EK4');
-  </script>
-
-  <!-- Facebook Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '630696149944730');
-    fbq('track', 'PageView');
-
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+    t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '630696149944730'); fbq('track', 'PageView');
     function trackButtonClick(url, fbEventName, gAdsId) {
-      fbq('track', 'ViewContent');
-      fbq('track', 'Checkout');
-      fbq('trackCustom', fbEventName);
-      gtag('event', 'conversion', {
-        'send_to': gAdsId,
-        'event_callback': function() { window.location = url; }
-      });
+      fbq('track', 'ViewContent'); fbq('track', 'Checkout'); fbq('trackCustom', fbEventName);
+      gtag('event', 'conversion', { 'send_to': gAdsId, 'event_callback': function() { window.location = url; } });
       setTimeout(function() { window.location = url; }, 300);
       return false;
     }
@@ -82,6 +39,7 @@
   <h1 class="text-2xl font-bold">Miji Mystique – Product Collection</h1>
 </header>
 
+<!-- Your 4 product cards section (already correct) -->
 <section class="p-4">
   <h2 class="text-center text-2xl font-bold mb-6">Our Bestselling Serums</h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
@@ -169,6 +127,7 @@
   </div>
 </section>
 
+<!-- Why Choose Miji Mystique Section -->
 <section class="bg-pink-50 p-8 mt-12">
   <h2 class="text-center text-2xl font-bold mb-4">Why Choose Miji Mystique?</h2>
   <ul class="list-disc max-w-2xl mx-auto text-gray-700 text-lg space-y-3">
@@ -180,6 +139,7 @@
   </ul>
 </section>
 
+<!-- FAQ Section -->
 <section class="p-8">
   <h2 class="text-center text-2xl font-bold mb-6">FAQs</h2>
   <div class="max-w-3xl mx-auto space-y-6">
@@ -202,10 +162,16 @@
   </div>
 </section>
 
+<!-- Footer -->
 <footer class="bg-pink-100 p-4 text-center text-sm mt-10">
   THANK YOU FOR SHOPPING WITH US<br>
   C-Block, Sector 63, Noida | Ph: 01204108678 | Email: mijimystique@gmail.com
 </footer>
+
+<!-- Sticky CTA Bar -->
+<div class="sticky-cta">
+  ✨ Reveal Your Glow → <a href="#products" style="text-decoration: underline;">Shop Now</a>
+</div>
 
 </body>
 </html>
