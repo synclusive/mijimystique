@@ -8,7 +8,7 @@
   <meta name="description" content="Explore Miji Mystique's bestselling serums powered by Retinol, Vitamin C, Glutathione, and AHP8 Peptides. Unlock your radiant skin today.">
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mijmystique.com/" />
-  <meta property="og:title" content="Miji Mystique - Product Collection" /> 
+  <meta property="og:title" content="Miji Mystique - Product Collection" />
   <meta property="og:description" content="Explore Miji Mystique's bestselling serums powered by Retinol, Vitamin C, Glutathione, and AHP8 Peptides. Unlock your radiant skin today." />
   <meta property="og:image" content="https://synclusive.github.io/mijimystique/images/retinol.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -48,19 +48,37 @@
 
   <!-- Common Tracking Script -->
   <script>
+    function gtagSendEvent(url) {
+      var callback = function () {
+        if (typeof url === 'string') {
+          window.location.href = url;
+        }
+      };
+      gtag('event', 'product_checkout', {
+        currency: 'INR',
+        value: 1,
+        items: [{
+          item_name: 'Serum Purchase',
+          item_category: 'Serum',
+          item_variant: url.includes('amazon') ? 'Amazon' : 'Flipkart'
+        }],
+        event_callback: callback,
+        event_timeout: 2000
+      });
+    }
+
     function commonButtonClick(url) {
       fbq('track', 'ViewContent');
       fbq('track', 'Checkout');
-      gtag('event', 'product_checkout', {
-        event_category: 'engagement',
-        event_label: url,
-        value: 1
-      });
-      setTimeout(function() { window.location.href = url; }, 300);
+      gtagSendEvent(url);
       return false;
     }
   </script>
 </head>
+
+
+<!-- Page Content Starts -->
+
 <body class="bg-white text-gray-800">
 
 <header class="bg-gray-900 text-white p-4 flex items-center justify-center gap-4">
