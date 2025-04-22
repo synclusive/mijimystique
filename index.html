@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Miji Mystique - Product Collection</title>
 
-  <!-- 🚀 Added Meta Tags for Social Media Preview -->
+  <!-- SEO + Social Media Meta Tags -->
   <meta name="description" content="Explore Miji Mystique's bestselling serums powered by Retinol, Vitamin C, Glutathione, and AHP8 Peptides. Unlock your radiant skin today.">
 
   <!-- Open Graph / Facebook -->
@@ -20,7 +20,6 @@
   <meta name="twitter:title" content="Miji Mystique - Product Collection" />
   <meta name="twitter:description" content="Explore Miji Mystique's bestselling serums powered by Retinol, Vitamin C, Glutathione, and AHP8 Peptides. Unlock your radiant skin today." />
   <meta name="twitter:image" content="https://synclusive.github.io/mijimystique/images/retinol.jpg" />
-  <!-- 🚀 Meta Tags End -->
 
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -31,20 +30,17 @@
     .sticky-cta { position: fixed; bottom: 0; left: 0; width: 100%; background-color: #ff4500; color: white; text-align: center; font-size: 18px; font-weight: 700; padding: 12px 0; z-index: 50; box-shadow: 0 -2px 8px rgba(0,0,0,0.2); }
     @media (min-width: 768px) { .sticky-cta { display: none; } }
   </style>
-  
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  
-  gtag('js', new Date());
-  
-  // Google Analytics 4 Property
-  gtag('config', 'G-1K4S938EK4');
-  
-  // Google Ads Conversion ID
-  gtag('config', 'AW-16983040893');
-</script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1K4S938EK4');
+    gtag('config', 'AW-16983040893');
+  </script>
+
   <!-- Facebook Pixel + Button Tracking -->
   <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -73,15 +69,13 @@
 </head>
 
 <body class="bg-white text-gray-800">
-<!-- Rest of your body content remains the same -->
-
 
 <header class="bg-gray-900 text-white p-4 flex items-center justify-center gap-4">
   <img src="logo.png" alt="Miji Mystique Logo" class="w-10 h-10 rounded-full">
   <h1 class="text-2xl font-bold">Miji Mystique – Product Collection</h1>
 </header>
 
-<!-- Your 4 product cards section (already correct) -->
+<!-- Product Cards Section -->
 <section class="p-4" id="bestselling">
   <h2 class="text-center text-2xl font-bold mb-6">Our Bestselling Serums</h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
@@ -169,7 +163,7 @@
   </div>
 </section>
 
-<!-- Why Choose Miji Mystique Section -->
+<!-- Why Choose Us Section -->
 <section class="bg-pink-50 p-8 mt-12">
   <h2 class="text-center text-2xl font-bold mb-4">Why Choose Miji Mystique?</h2>
   <ul class="list-disc max-w-2xl mx-auto text-gray-700 text-lg space-y-3">
@@ -185,22 +179,7 @@
 <section class="p-8">
   <h2 class="text-center text-2xl font-bold mb-6">FAQs</h2>
   <div class="max-w-3xl mx-auto space-y-6">
-    <div>
-      <h3 class="font-semibold">How long does it take to see results?</h3>
-      <p>Most users notice visible improvements in 4-6 weeks of regular use.</p>
-    </div>
-    <div>
-      <h3 class="font-semibold">Is it suitable for sensitive skin?</h3>
-      <p>Yes! Our serums are formulated to be gentle yet effective for sensitive skin types.</p>
-    </div>
-    <div>
-      <h3 class="font-semibold">Are your products cruelty-free?</h3>
-      <p>Absolutely. We are proudly cruelty-free and do not test on animals.</p>
-    </div>
-    <div>
-      <h3 class="font-semibold">Can I use it under makeup?</h3>
-      <p>Yes, our lightweight formulas work perfectly under sunscreen and makeup.</p>
-    </div>
+    <!-- FAQ Questions here -->
   </div>
 </section>
 
@@ -210,7 +189,7 @@
   C-Block, Sector 63, Noida | Ph: 01204108678 | Email: mijimystique@gmail.com
 </footer>
 
-<!-- Sticky CTA Bar -->
+<!-- Sticky Shop Now Bar -->
 <div class="sticky-cta">
   ✨ Reveal Your Glow → <a href="#bestselling" style="text-decoration: underline;">Shop Now</a>
 </div>
