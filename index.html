@@ -42,27 +42,27 @@
   </script>
 
   <!-- Facebook Pixel + Button Tracking -->
-  <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
-    t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '630696149944730'); 
-    fbq('track', 'PageView');
+  <!-- Load Facebook Pixel Script normally -->
+<script async src="https://connect.facebook.net/en_US/fbevents.js"></script>
 
-    function trackButtonClick(url, fbEventName, gAdsId) {
-      fbq('track', 'ViewContent');
-      fbq('track', 'Checkout');
-      fbq('trackCustom', fbEventName);
-      gtag('event', 'conversion', { 
-        'send_to': gAdsId, 
-        'event_callback': function() { window.location = url; }
-      });
-      setTimeout(function() { window.location = url; }, 300);
-      return false;
-    }
-  </script>
+<!-- Initialize Facebook Pixel -->
+<script>
+  fbq('init', '630696149944730');
+  fbq('track', 'PageView');
+
+  function trackButtonClick(url, fbEventName, gAdsId) {
+    fbq('track', 'ViewContent');
+    fbq('track', 'Checkout');
+    fbq('trackCustom', fbEventName);
+    gtag('event', 'conversion', { 
+      'send_to': gAdsId, 
+      'event_callback': function() { window.location = url; }
+    });
+    setTimeout(function() { window.location = url; }, 300);
+    return false;
+  }
+</script>
+
   <noscript>
     <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
   </noscript>
