@@ -1,199 +1,190 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <title>Miji Mystique - Product Collection</title>
- 
-   <!-- 🚀 Added Meta Tags for Social Media Preview -->
-   <meta name="description" content="Explore Miji Mystique's bestselling serums powered by Retinol, Vitamin C, Glutathione, and AHP8 Peptides. Unlock your radiant skin today.">
- 
-   <!-- Open Graph / Facebook -->
-   <meta property="og:type" content="website" />
-   <meta property="og:url" content="https://mijmystique.com/" />
-   <meta property="og:title" content="Miji Mystique - Product Collection" />
-   <meta property="og:description" content="Explore Miji Mystique's bestselling serums powered by Retinol, Vitamin C, Glutathione, and AHP8 Peptides. Unlock your radiant skin today." />
-   <meta property="og:image" content="https://synclusive.github.io/mijimystique/images/retinol.jpg" />
- 
-   <!-- Twitter Card -->
-   <meta name="twitter:card" content="summary_large_image" />
-   <meta name="twitter:url" content="https://mijmystique.com/" />
-   <meta name="twitter:title" content="Miji Mystique - Product Collection" />
-   <meta name="twitter:description" content="Explore Miji Mystique's bestselling serums powered by Retinol, Vitamin C, Glutathione, and AHP8 Peptides. Unlock your radiant skin today." />
-   <meta name="twitter:image" content="https://synclusive.github.io/mijimystique/images/retinol.jpg" />
-   <!-- 🚀 Meta Tags End -->
- 
-   <script src="https://cdn.tailwindcss.com"></script>
-   <style>
-     img.product-image { width: 70%; margin-left: auto; margin-right: auto; display: block; }
-     .rating-stars { text-align: center; color: #facc15; margin-bottom: 10px; }
-     li { font-weight: 600; }
-     .shop-now-btn { font-size: 20px; font-weight: 700; padding: 18px 55px; border-radius: 9999px; }
-     .sticky-cta { position: fixed; bottom: 0; left: 0; width: 100%; background-color: #ff4500; color: white; text-align: center; font-size: 18px; font-weight: 700; padding: 12px 0; z-index: 50; box-shadow: 0 -2px 8px rgba(0,0,0,0.2); }
-     @media (min-width: 768px) { .sticky-cta { display: none; } }
-   </style>
-   
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
-   <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-1K4S938EK4'); </script>
-   <script>
-     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
-     t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
-     s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-     fbq('init', '630696149944730'); fbq('track', 'PageView');
-     function trackButtonClick(url, fbEventName, gAdsId) {
-       fbq('track', 'ViewContent'); fbq('track', 'Checkout'); fbq('trackCustom', fbEventName);
-       gtag('event', 'conversion', { 'send_to': gAdsId, 'event_callback': function() { window.location = url; } });
-       setTimeout(function() { window.location = url; }, 300);
-       return false;
-     }
-   </script>
-   <noscript>
-     <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
-   </noscript>
- </head>
- 
- <body class="bg-white text-gray-800">
- <!-- Rest of your body content remains the same -->
- 
- 
- <header class="bg-gray-900 text-white p-4 flex items-center justify-center gap-4">
-   <img src="logo.png" alt="Miji Mystique Logo" class="w-10 h-10 rounded-full">
-   <h1 class="text-2xl font-bold">Miji Mystique – Product Collection</h1>
- </header>
- 
- <!-- Your 4 product cards section (already correct) -->
- <section class="p-4">
-   <h2 class="text-center text-2xl font-bold mb-6">Our Bestselling Serums</h2>
-   <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
- 
-     <!-- Retinol -->
-     <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
-       <h2 class="text-xl font-bold mb-2 text-center">2% Retinol Vitamin A Face Serum</h2>
-       <div class="rating-stars">★★★★★ (237 reviews)</div>
-       <img src="2-min.jpg" class="product-image rounded-lg mb-4" loading="lazy" alt="Retinol Serum">
-       <ul class="list-disc ml-6 text-base mb-4">
-         <li>Boosts collagen and cell turnover</li>
-         <li>Reduces fine lines & wrinkles</li>
-         <li>Fades dark spots & pigmentation</li>
-         <li>Refines skin texture & pores</li>
-         <li>Hydrates & nourishes deeply</li>
-         <li>Improves firmness & elasticity</li>
-       </ul>
-       <p class="text-center text-sm text-red-500 mb-2">Limited Stock Available!</p>
-       <div class="flex flex-col items-center gap-4 mt-auto pt-2">
-         <a href="#" onclick="return trackButtonClick('https://www.amazon.in/dp/B0DVC7QM1L', 'BuyOnAmazonRetinol', 'AW-16983040893/j9e3COLcnrkaEP3GkqI_')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Unlock Glow on Amazon</a>
-         <a href="#" onclick="return trackButtonClick('https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU', 'BuyOnFlipkartRetinol', 'AW-16983040893/7wiSCLKbqbkaEP3GkqI_')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Get Glow on Flipkart</a>
-       </div>
-     </div>
- 
-     <!-- Glutathione -->
-     <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
-       <h2 class="text-xl font-bold mb-2 text-center">10% Glutathione Brightening Serum</h2>
-       <div class="rating-stars">★★★★★ (189 reviews)</div>
-       <img src="4-min.jpg" class="product-image rounded-lg mb-4" loading="lazy" alt="Glutathione Serum">
-       <ul class="list-disc ml-6 text-base mb-4">
-         <li>Brightens & evens out complexion</li>
-         <li>Reduces dark spots & pigmentation</li>
-         <li>Combats oxidative stress</li>
-         <li>Enhances natural glow</li>
-         <li>Hydrates dry skin deeply</li>
-         <li>Safe for daily brightening</li>
-       </ul>
-       <p class="text-center text-sm text-red-500 mb-2">Limited Stock Available!</p>
-       <div class="flex flex-col items-center gap-4 mt-auto pt-2">
-         <a href="#" onclick="return trackButtonClick('https://www.amazon.in/dp/B0DVC5KD7W', 'BuyOnAmazonGlutathione', 'AW-16983040893/aQ4ICLPrqrkaEP3GkqI_')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Brighten Up on Amazon</a>
-         <a href="#" onclick="return trackButtonClick('https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA', 'BuyOnFlipkartGlutathione', 'AW-16983040893/8nxACO3yqrkaEP3GkqI_')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Glow Bright on Flipkart</a>
-       </div>
-     </div>
- 
-     <!-- Vitamin C -->
-     <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
-       <h2 class="text-xl font-bold mb-2 text-center">Advanced 20% Vitamin C Face Serum</h2>
-       <div class="rating-stars">★★★★★ (321 reviews)</div>
-       <img src="3-min.jpg" class="product-image rounded-lg mb-4" loading="lazy" alt="Vitamin C Serum">
-       <ul class="list-disc ml-6 text-base mb-4">
-         <li>Fades sun spots and pigmentation</li>
-         <li>Boosts collagen production</li>
-         <li>Enhances radiance & glow</li>
-         <li>Hydrates and plumps skin</li>
-         <li>Protects from free radical damage</li>
-         <li>Improves skin texture</li>
-       </ul>
-       <p class="text-center text-sm text-red-500 mb-2">Limited Stock Available!</p>
-       <div class="flex flex-col items-center gap-4 mt-auto pt-2">
-         <a href="#" onclick="return trackButtonClick('https://www.amazon.in/dp/B0DVC91MN3', 'BuyOnAmazonVitaminC', 'AW-16983040893/wy17CIymqrkaEP3GkqI_')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Radiate Glow on Amazon</a>
-         <a href="#" onclick="return trackButtonClick('https://www.flipkart.com/miji-mystique-advanced-vitamin-c-20/p/itmddd9b16065fa0?pid=KMTH7JUMKS4RQTGW', 'BuyOnFlipkartVitaminC', 'AW-16983040893/idqrCOe5q7kaEP3GkqI_')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Glow with Flipkart</a>
-       </div>
-     </div>
- 
-     <!-- AHP8 -->
-     <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
-       <h2 class="text-xl font-bold mb-2 text-center">AHP8 Peptide + Niacinamide Face Serum</h2>
-       <div class="rating-stars">★★★★★ (175 reviews)</div>
-       <img src="5-min.jpg" class="product-image rounded-lg mb-4" loading="lazy" alt="AHP8 Serum">
-       <ul class="list-disc ml-6 text-base mb-4">
-         <li>Softens forehead & smile lines</li>
-         <li>Firms and lifts sagging skin</li>
-         <li>Improves elasticity and strength</li>
-         <li>Reduces redness & inflammation</li>
-         <li>Enhances skin barrier function</li>
-         <li>Hydrates without greasiness</li>
-       </ul>
-       <p class="text-center text-sm text-red-500 mb-2">Limited Stock Available!</p>
-       <div class="flex flex-col items-center gap-4 mt-auto pt-2">
-         <a href="#" onclick="return trackButtonClick('https://www.amazon.in/dp/B0DVC5QRDK', 'BuyOnAmazonAHP8', 'AW-16983040893/lvcrCMqsrLkaEP3GkqI_')" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Firm Up on Amazon</a>
-         <a href="#" onclick="return trackButtonClick('https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S', 'BuyOnFlipkartAHP8', 'AW-16983040893/60m6CPusoLkaEP3GkqI_')" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Firm Skin on Flipkart</a>
-       </div>
-     </div>
- 
-   </div>
- </section>
- 
- <!-- Why Choose Miji Mystique Section -->
- <section class="bg-pink-50 p-8 mt-12">
-   <h2 class="text-center text-2xl font-bold mb-4">Why Choose Miji Mystique?</h2>
-   <ul class="list-disc max-w-2xl mx-auto text-gray-700 text-lg space-y-3">
-     <li>Formulated with proven, dermatologist-recommended ingredients</li>
-     <li>Gentle yet powerful solutions for all skin types</li>
-     <li>No harmful chemicals – Paraben Free, Sulphate Free</li>
-     <li>Visible results within 4-6 weeks of consistent use</li>
-     <li>Trusted by over 10,000+ happy customers</li>
-   </ul>
- </section>
- 
- <!-- FAQ Section -->
- <section class="p-8">
-   <h2 class="text-center text-2xl font-bold mb-6">FAQs</h2>
-   <div class="max-w-3xl mx-auto space-y-6">
-     <div>
-       <h3 class="font-semibold">How long does it take to see results?</h3>
-       <p>Most users notice visible improvements in 4-6 weeks of regular use.</p>
-     </div>
-     <div>
-       <h3 class="font-semibold">Is it suitable for sensitive skin?</h3>
-       <p>Yes! Our serums are formulated to be gentle yet effective for sensitive skin types.</p>
-     </div>
-     <div>
-       <h3 class="font-semibold">Are your products cruelty-free?</h3>
-       <p>Absolutely. We are proudly cruelty-free and do not test on animals.</p>
-     </div>
-     <div>
-       <h3 class="font-semibold">Can I use it under makeup?</h3>
-       <p>Yes, our lightweight formulas work perfectly under sunscreen and makeup.</p>
-     </div>
-   </div>
- </section>
- 
- <!-- Footer -->
- <footer class="bg-pink-100 p-4 text-center text-sm mt-10">
-   THANK YOU FOR SHOPPING WITH US<br>
-   C-Block, Sector 63, Noida | Ph: 01204108678 | Email: mijimystique@gmail.com
- </footer>
- 
- <!-- Sticky CTA Bar -->
- <div class="sticky-cta">
-   ✨ Reveal Your Glow → <a href="#products" style="text-decoration: underline;">Shop Now</a>
- </div>
- 
- </body>
- </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Miji Mystique - Product Collection</title>
+
+  <!-- SEO + Social Media Meta Tags -->
+  <meta name="description" content="Explore Miji Mystique's bestselling serums powered by Retinol, Vitamin C, Glutathione, and AHP8 Peptides. Unlock your radiant skin today.">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mijmystique.com/" />
+  <meta property="og:title" content="Miji Mystique - Product Collection" />
+  <meta property="og:description" content="Explore Miji Mystique's bestselling serums powered by Retinol, Vitamin C, Glutathione, and AHP8 Peptides. Unlock your radiant skin today." />
+  <meta property="og:image" content="https://synclusive.github.io/mijimystique/images/retinol.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://mijmystique.com/" />
+  <meta name="twitter:title" content="Miji Mystique - Product Collection" />
+  <meta name="twitter:description" content="Explore Miji Mystique's bestselling serums powered by Retinol, Vitamin C, Glutathione, and AHP8 Peptides. Unlock your radiant skin today." />
+  <meta name="twitter:image" content="https://synclusive.github.io/mijimystique/images/retinol.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    img.product-image { width: 70%; margin-left: auto; margin-right: auto; display: block; }
+    .rating-stars { text-align: center; color: #facc15; margin-bottom: 10px; }
+    li { font-weight: 600; }
+    .shop-now-btn { font-size: 20px; font-weight: 700; padding: 18px 55px; border-radius: 9999px; }
+    .sticky-cta { position: fixed; bottom: 0; left: 0; width: 100%; background-color: #ff4500; color: white; text-align: center; font-size: 18px; font-weight: 700; padding: 12px 0; z-index: 50; box-shadow: 0 -2px 8px rgba(0,0,0,0.2); }
+    @media (min-width: 768px) { .sticky-cta { display: none; } }
+  </style>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1K4S938EK4');
+  </script>
+
+  <!-- Facebook Pixel -->
+  <script async src="https://connect.facebook.net/en_US/fbevents.js"></script>
+  <script>
+    fbq('init', '630696149944730');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <!-- Common Tracking Script -->
+  <script>
+    function commonButtonClick(url) {
+      fbq('track', 'ViewContent');
+      fbq('track', 'Checkout');
+      gtag('event', 'product_checkout', {
+        event_category: 'engagement',
+        event_label: url,
+        value: 1
+      });
+      setTimeout(function() { window.location.href = url; }, 300);
+      return false;
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800">
+
+<header class="bg-gray-900 text-white p-4 flex items-center justify-center gap-4">
+  <img src="logo.png" alt="Miji Mystique Logo" class="w-10 h-10 rounded-full">
+  <h1 class="text-2xl font-bold">Miji Mystique – Product Collection</h1>
+</header>
+
+<section class="p-4" id="bestselling">
+  <h2 class="text-center text-2xl font-bold mb-6">Our Bestselling Serums</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+    <!-- Product Cards -->
+    <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
+      <h2 class="text-xl font-bold mb-2 text-center">2% Retinol Vitamin A Face Serum</h2>
+      <div class="rating-stars">★★★★★ (237 reviews)</div>
+      <img src="2-min.jpg" class="product-image rounded-lg mb-4" loading="lazy" alt="Retinol Serum">
+      <ul class="list-disc ml-6 text-base mb-4">
+        <li>Boosts collagen and cell turnover</li>
+        <li>Reduces fine lines & wrinkles</li>
+        <li>Fades dark spots & pigmentation</li>
+        <li>Refines skin texture & pores</li>
+        <li>Hydrates & nourishes deeply</li>
+        <li>Improves firmness & elasticity</li>
+      </ul>
+      <div class="flex flex-col items-center gap-4 mt-auto pt-2">
+        <a href="https://www.amazon.in/dp/B0DVC7QM1L" onclick="return commonButtonClick(this.href)" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Unlock Glow on Amazon</a>
+        <a href="https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU" onclick="return commonButtonClick(this.href)" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Get Glow on Flipkart</a>
+      </div>
+    </div>
+
+    <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
+      <h2 class="text-xl font-bold mb-2 text-center">10% Glutathione Brightening Serum</h2>
+      <div class="rating-stars">★★★★★ (189 reviews)</div>
+      <img src="4-min.jpg" class="product-image rounded-lg mb-4" loading="lazy" alt="Glutathione Serum">
+      <ul class="list-disc ml-6 text-base mb-4">
+        <li>Brightens & evens out complexion</li>
+        <li>Reduces dark spots & pigmentation</li>
+        <li>Combats oxidative stress</li>
+        <li>Enhances natural glow</li>
+        <li>Hydrates dry skin deeply</li>
+      </ul>
+      <div class="flex flex-col items-center gap-4 mt-auto pt-2">
+        <a href="https://www.amazon.in/dp/B0DVC5KD7W" onclick="return commonButtonClick(this.href)" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Brighten Up on Amazon</a>
+        <a href="https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA" onclick="return commonButtonClick(this.href)" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Glow Bright on Flipkart</a>
+      </div>
+    </div>
+
+    <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
+      <h2 class="text-xl font-bold mb-2 text-center">Advanced 20% Vitamin C Face Serum</h2>
+      <div class="rating-stars">★★★★★ (321 reviews)</div>
+      <img src="3-min.jpg" class="product-image rounded-lg mb-4" loading="lazy" alt="Vitamin C Serum">
+      <ul class="list-disc ml-6 text-base mb-4">
+        <li>Fades sun spots and pigmentation</li>
+        <li>Boosts collagen production</li>
+        <li>Enhances radiance & glow</li>
+        <li>Hydrates and plumps skin</li>
+        <li>Protects from free radical damage</li>
+      </ul>
+      <div class="flex flex-col items-center gap-4 mt-auto pt-2">
+        <a href="https://www.amazon.in/dp/B0DVC91MN3" onclick="return commonButtonClick(this.href)" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Radiate Glow on Amazon</a>
+        <a href="https://www.flipkart.com/miji-mystique-advanced-vitamin-c-20/p/itmddd9b16065fa0?pid=KMTH7JUMKS4RQTGW" onclick="return commonButtonClick(this.href)" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Glow with Flipkart</a>
+      </div>
+    </div>
+
+    <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
+      <h2 class="text-xl font-bold mb-2 text-center">AHP8 Peptide + Niacinamide Face Serum</h2>
+      <div class="rating-stars">★★★★★ (175 reviews)</div>
+      <img src="5-min.jpg" class="product-image rounded-lg mb-4" loading="lazy" alt="AHP8 Serum">
+      <ul class="list-disc ml-6 text-base mb-4">
+        <li>Softens forehead & smile lines</li>
+        <li>Firms and lifts sagging skin</li>
+        <li>Improves elasticity and strength</li>
+        <li>Reduces redness & inflammation</li>
+        <li>Enhances skin barrier function</li>
+      </ul>
+      <div class="flex flex-col items-center gap-4 mt-auto pt-2">
+        <a href="https://www.amazon.in/dp/B0DVC5QRDK" onclick="return commonButtonClick(this.href)" class="bg-[#FF9900] hover:bg-[#FF8C00] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Firm Up on Amazon</a>
+        <a href="https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S" onclick="return commonButtonClick(this.href)" class="bg-[#2874F0] hover:bg-[#1A5FD0] text-white font-semibold py-3 px-8 rounded w-full max-w-xs text-center">Firm Skin on Flipkart</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="bg-pink-50 p-8 mt-12">
+  <h2 class="text-center text-2xl font-bold mb-4">Why Choose Miji Mystique?</h2>
+  <ul class="list-disc max-w-2xl mx-auto text-gray-700 text-lg space-y-3">
+    <li>Formulated with proven, dermatologist-recommended ingredients</li>
+    <li>Gentle yet powerful solutions for all skin types</li>
+    <li>No harmful chemicals – Paraben Free, Sulphate Free</li>
+    <li>Visible results within 4-6 weeks of consistent use</li>
+    <li>Trusted by over 10,000+ happy customers</li>
+  </ul>
+</section>
+
+<section class="p-8">
+  <h2 class="text-center text-2xl font-bold mb-6">FAQs</h2>
+  <div class="max-w-3xl mx-auto space-y-6">
+    <div>
+      <h3 class="font-semibold">How long does it take to see results?</h3>
+      <p>Most users notice visible improvements in 4-6 weeks of regular use.</p>
+    </div>
+    <div>
+      <h3 class="font-semibold">Is it suitable for sensitive skin?</h3>
+      <p>Yes! Our serums are formulated to be gentle yet effective for sensitive skin types.</p>
+    </div>
+    <div>
+      <h3 class="font-semibold">Are your products cruelty-free?</h3>
+      <p>Absolutely. We are proudly cruelty-free and do not test on animals.</p>
+    </div>
+    <div>
+      <h3 class="font-semibold">Can I use it under makeup?</h3>
+      <p>Yes, our lightweight formulas work perfectly under sunscreen and makeup.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-pink-100 p-4 text-center text-sm mt-10">
+  THANK YOU FOR SHOPPING WITH US<br>
+  C-Block, Sector 63, Noida | Ph: 01204108678 | Email: mijimystique@gmail.com
+</footer>
+
+<div class="sticky-cta">
+  ✨ Reveal Your Glow → <a href="#bestselling" style="text-decoration: underline;">Shop Now</a>
+</div>
+
+</body>
+</html>
