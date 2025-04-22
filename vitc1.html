@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Miji Mystique - Vitamin C Serum</title>
+  <title>Miji Mystique - Vitamin C Serum Redirect</title>
 
   <!-- Google Analytics GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
@@ -12,60 +11,37 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-1K4S938EK4');
-
-    // Fire GA4 conversion event on page load
-    gtag('event', 'conversion_event_outbound_click', {});
+    gtag('event', 'product_checkout', {
+      currency: 'INR',
+      value: 1,
+      items: [{
+        item_name: 'Vitamin C Serum Redirect',
+        item_category: 'Serum',
+        item_variant: 'Amazon'
+      }]
+    });
   </script>
 
   <!-- Facebook Pixel -->
+  <script async src="https://connect.facebook.net/en_US/fbevents.js"></script>
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '630696149944730');
     fbq('track', 'PageView');
-
-    // Fire Facebook Checkout event on page load
     fbq('track', 'Checkout');
   </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
-  </noscript>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/></noscript>
 
   <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fafafa;
-      font-size: 24px;
-      color: #333;
-    }
+    body { display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: Arial, sans-serif; background: #fafafa; font-size: 24px; color: #333; }
   </style>
 </head>
+
 <body>
-
-  Redirecting you to the best offer...
-
-  <script>
-    function redirectToStore() {
-      var amazonUrl = 'https://www.amazon.in/dp/B0DVC91MN3'; // Replace with your Vitamin C Amazon link
-
-      window.location.href = amazonUrl;
-    }
-
-    // Auto redirect after short delay
-    setTimeout(redirectToStore, 2000);
-  </script>
-
+Redirecting you to the best offer...
+<script>
+  setTimeout(function() {
+    window.location.href = 'https://www.amazon.in/dp/B0DVC91MN3'; // Vitamin C Amazon URL
+  }, 2000);
+</script>
 </body>
 </html>
