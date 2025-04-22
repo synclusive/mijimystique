@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Miji Mystique - Retinol Serum</title>
+  <title>Miji Mystique - Retinol Serum Redirect</title>
 
   <!-- Google Analytics GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
@@ -10,26 +10,25 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-1K4S938EK4'); // Replace with your GA4 ID
+    gtag('config', 'G-1K4S938EK4');
 
     // Fire GA4 conversion event on page load
-    gtag('event', 'conversion_event_outbound_click', {});
+    gtag('event', 'product_checkout', {
+      currency: 'INR',
+      value: 1,
+      items: [{
+        item_name: 'Retinol Serum Redirect',
+        item_category: 'Serum',
+        item_variant: 'Amazon'
+      }]
+    });
   </script>
 
   <!-- Facebook Pixel -->
+  <script async src="https://connect.facebook.net/en_US/fbevents.js"></script>
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '630696149944730'); // Replace with your Pixel ID
+    fbq('init', '630696149944730');
     fbq('track', 'PageView');
-
-    // Fire Facebook Checkout event on page load
     fbq('track', 'Checkout');
   </script>
   <noscript>
@@ -37,6 +36,7 @@
          src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
   </noscript>
 
+  <!-- Page Styles -->
   <style>
     body {
       display: flex;
@@ -51,20 +51,20 @@
     }
   </style>
 </head>
+
 <body>
 
-  Redirecting you to the best offer...
+Redirecting you to the best offer...
 
-  <script>
-    function redirectToStore() {
-      var amazonUrl = 'https://www.amazon.in/dp/B0DVC7QM1L'; // Replace with your link
+<!-- Redirect Script -->
+<script>
+  function redirectToStore() {
+    var amazonUrl = 'https://www.amazon.in/dp/B0DVC7QM1L'; // Replace with your correct Amazon URL
+    window.location.href = amazonUrl;
+  }
 
-      window.location.href = amazonUrl;
-    }
-
-    // Auto redirect after short delay
-    setTimeout(redirectToStore, 2000);
-  </script>
+  setTimeout(redirectToStore, 2000);
+</script>
 
 </body>
 </html>
