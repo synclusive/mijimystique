@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<!--   Google Tag Manager -->
+<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MQGKC8RC');</script>
+})(window,document,'script','dataLayer','GTM-MQGKC8RC');</script> -->
 <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <title>Miji Mystique - Product Collection</title> 
@@ -38,53 +38,57 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
  
   
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-1K4S938EK4');
-  </script>
+ <!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  // Enable debug_mode so you can verify in DebugView
+  gtag('config', 'G-1K4S938EK4', { debug_mode: true });
+</script>
 
-  <!-- Facebook Pixel -->
-  <script async src="https://connect.facebook.net/en_US/fbevents.js"></script>
-  <script>
-    fbq('init', '630696149944730');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
-  </noscript>
+<!-- Facebook Pixel -->
+<script async src="https://connect.facebook.net/en_US/fbevents.js"></script>
+<script>
+  fbq('init', '630696149944730');
+  fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+       src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
+</noscript>
 
-  <!-- Common Tracking Script -->
-  <script>
-    function gtagSendEvent(url) {
-      var callback = function () {
-        if (typeof url === 'string') {
-          window.location.href = url;
-        }
-      };
-      gtag('event', 'product_checkout', {
-        currency: 'INR',
-        value: 1,
-        items: [{
-          item_name: 'Serum Purchase',
-          item_category: 'Serum',
-          item_variant: url.includes('amazon') ? 'Amazon' : 'Flipkart'
-        }],
-        event_callback: callback,
-        event_timeout: 2000
-      });
-    }
+<!-- Common Tracking Script -->
+<script>
+  function gtagSendEvent(url) {
+    var callback = function() {
+      if (typeof url === 'string') {
+        window.location.href = url;
+      }
+    };
+    gtag('event', 'product_checkout', {
+      send_to: 'G-1K4S938EK4',
+      currency: 'INR',
+      value: 1,
+      items: [{
+        item_name:   'Serum Purchase',
+        item_category: 'Serum',
+        item_variant: url.includes('amazon') ? 'Amazon' : 'Flipkart'
+      }],
+      event_callback: callback,
+      event_timeout: 2000
+    });
+  }
 
-    function commonButtonClick(url) {
-      fbq('track', 'ViewContent');
-      fbq('track', 'Checkout');
-      gtagSendEvent(url);
-      return false;
-    }
-  </script>
+  function commonButtonClick(url) {
+    fbq('track', 'ViewContent');
+    fbq('track', 'Checkout');
+    gtagSendEvent(url);
+    return false;
+  }
+</script>
+
 </head>
 
 
