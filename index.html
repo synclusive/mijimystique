@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- Ensure breakpoints work on mobile -->
+  <!-- Make mobile media queries work -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Miji Mystique - Product Collection</title>
@@ -10,7 +10,7 @@
   <!-- SEO + Social Media Meta Tags -->
   <meta name="description" content="Explore Miji Mystique's bestselling serums powered by Retinol, Vitamin C, Glutathione, and AHP8 Peptides. Unlock your radiant skin today.">
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://mijmystique.com/" />
+  <meta property="og:url" content="https://mijimystique.com/" />
   <meta property="og:title" content="Miji Mystique - Product Collection" />
   <meta property="og:description" content="Explore Miji Mystique's bestselling serums powered by Retinol, Vitamin C, Glutathione, and AHP8 Peptides. Unlock your radiant skin today." />
   <meta property="og:image" content="https://synclusive.github.io/mijimystique/images/retinol.jpg" />
@@ -20,8 +20,30 @@
   <meta name="twitter:description" content="Explore Miji Mystique's bestselling serums powered by Retinol, Vitamin C, Glutathione, and AHP8 Peptides. Unlock your radiant skin today." />
   <meta name="twitter:image" content="https://synclusive.github.io/mijimystique/images/retinol.jpg" />
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS (dev CDN; swap to PostCSS/CLI in production) -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Facebook Pixel Base Code -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq) return;
+      n=f.fbq=function(){
+        n.callMethod ?
+          n.callMethod.apply(n,arguments) :
+          n.queue.push(arguments);
+      };
+      if(!f._fbq) f._fbq=n;
+      n.push=n; n.loaded=!0; n.version='2.0'; n.queue=[];
+      t=b.createElement(e); t.async=!0; t.src=v;
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s);
+    }(
+      window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js'
+    );
+    fbq('init', '630696149944730');
+    fbq('track', 'PageView');
+  </script>
 
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
@@ -33,26 +55,6 @@
     gtag('config', 'G-1K4S938EK4', { debug_mode: true });
   </script>
 
-  <!-- Facebook Pixel -->
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '630696149944730');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
-  
   <style>
     img.product-image { width: 70%; margin: 0 auto; display: block; }
     .rating-stars { text-align: center; color: #facc15; margin-bottom: 10px; }
@@ -218,16 +220,17 @@ src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"
   </footer>
 
   <!-- Mobile Sticky CTA (hidden on md and up) -->
-  <div class="fixed bottom-0 left-0 w-full bg-[#ff4500] text-white text-center py-3 md:hidden">
+  <div class="fixed bottom-0 left-0 w-full bg-[#ff4500] text-white text-center py-3 md:hidden z-50">
     ✨ Reveal Your Glow → <a href="#bestselling" class="underline">Shop Now</a>
   </div>
 
-  <!-- Click handler for both FB Pixel & GA4 -->
+  <!-- Click handler for FB Pixel & GA4 -->
   <script>
+    console.log('trackButtonClick loaded');
     function trackButtonClick(url) {
       // Facebook events
       fbq('track', 'ViewContent');
-      fbq('track', 'Checkout');
+      fbq('track', 'InitiateCheckout');
 
       // GA4 event
       gtag('event', 'product_checkout', {
@@ -245,7 +248,7 @@ src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"
         event_timeout: 2000
       });
 
-      // Fallback redirect if callback doesn’t fire
+      // Fallback redirect
       setTimeout(function() {
         window.location = url;
       }, 2200);
