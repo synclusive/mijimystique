@@ -1,223 +1,188 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Miji Mystique - AHP8 Peptide Serum</title>
+  <!-- Mobile viewport for correct breakpoints -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Analytics 4 and Google Ads -->
+  <title>Miji Mystique - Product Collection</title>
+
+  <!-- SEO + Social Media Meta Tags -->
+  <meta name="description" content="Explore Miji Mystique's bestselling serums powered by Retinol, Vitamin C, Glutathione, and AHP8 Peptides. Unlock your radiant skin today.">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mijimystique.com/" />
+  <meta property="og:title" content="Miji Mystique - Product Collection" />
+  <meta property="og:description" content="Explore Miji Mystique's bestselling serums powered by Retinol, Vitamin C, Glutathione, and AHP8 Peptides. Unlock your radiant skin today." />
+  <meta property="og:image" content="https://synclusive.github.io/mijimystique/images/retinol.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://mijimystique.com/" />
+  <meta name="twitter:title" content="Miji Mystique - Product Collection" />
+  <meta name="twitter:description" content="Explore Miji Mystique's bestselling serums powered by Retinol, Vitamin C, Glutathione, and AHP8 Peptides. Unlock your radiant skin today." />
+  <meta name="twitter:image" content="https://synclusive.github.io/mijimystique/images/retinol.jpg" />
+
+  <!-- Tailwind CSS (Dev CDN; switch to PostCSS/CLI for production) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Facebook Pixel Base Code -->
+  <script>
+    (function(){try{
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init','630696149944730');fbq('track','PageView');
+    }catch(e){console.warn('FB Pixel error',e);}})();
+  </script>
+
+  <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-1K4S938EK4');
-    gtag('config', 'AW-16983040893');
-  </script>
-
-  <!-- Meta Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '630696149944730');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=630696149944730&ev=PageView&noscript=1"/>
-  </noscript>
-
-  <!-- Custom Event Tracking -->
-  <script>
-    function gtag_report_conversion_amazon(url) {
-      var callback = function () {
-        if (typeof(url) !== 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-        'send_to': 'AW-16983040893/lvcrCMqsrLkaEP3GkqI_',
-        'event_callback': callback
-      });
-      return false;
-    }
-
-    function gtag_report_conversion_flipkart(url) {
-      var callback = function () {
-        if (typeof(url) !== 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-        'send_to': 'AW-16983040893/60m6CPusoLkaEP3GkqI_',
-        'event_callback': callback
-      });
-      return false;
-    }
-
-    function trackAmazonAHP8() {
-      // Common checkout event
-      fbq('track', 'Checkout', {
-        content_name: 'AHP8 Serum',
-        platform: 'Amazon'
-      });
-
-      // Specific event
-      fbq('trackCustom', 'BuyOnAmazonAHP8');
-
-      // Google Analytics event
-      gtag('event', 'shop_now_click', {
-        'product_name': 'AHP8 Serum',
-        'platform': 'Amazon',
-        'destination_url': 'https://www.amazon.in/dp/B0DVC5QRDK'
-      });
-
-      return gtag_report_conversion_amazon('https://www.amazon.in/dp/B0DVC5QRDK');
-    }
-
-    function trackFlipkartAHP8() {
-      // Common checkout event
-      fbq('track', 'Checkout', {
-        content_name: 'AHP8 Serum',
-        platform: 'Flipkart'
-      });
-
-      // Specific event
-      fbq('trackCustom', 'BuyOnFlipkartAHP8');
-
-      // Google Analytics event
-      gtag('event', 'shop_now_click', {
-        'product_name': 'AHP8 Serum',
-        'platform': 'Flipkart',
-        'destination_url': 'https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S'
-      });
-
-      return gtag_report_conversion_flipkart('https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S');
-    }
+    (function(){try{
+      window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;
+      gtag('js',new Date());gtag('config','G-1K4S938EK4',{debug_mode:true});
+    }catch(e){console.warn('GA4 error',e);}})();
   </script>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #a67458;
-      padding: 5px 0;
-      text-align: center;
-      color: #fff;
-      font-size: 14px;
-      letter-spacing: 1px;
-    }
-    .logo {
-      width: 60px;
-      margin: 5px auto;
-      display: block;
-    }
-    .product-img {
-      max-width: 40%;
-      height: auto;
-      display: block;
-      margin: 20px auto;
-    }
-    .highlight-text {
-      font-weight: bold;
-      font-size: 16px;
-      text-align: center;
-      padding: 0 15px;
-      margin: 20px auto;
-      max-width: 600px;
-    }
-    .button-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
-    .shop-now-btn {
-      padding: 20px 50px;
-      background-color: #ff4500;
-      color: white;
-      font-size: 18px;
-      border: none;
-      cursor: pointer;
-      border-radius: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.2s;
-      min-width: 160px;
-    }
-    .shop-now-btn:hover {
-      transform: scale(1.05);
-    }
+    img.product-image{width:70%;margin:0 auto;display:block}
+    .rating-stars{text-align:center;color:#facc15;margin-bottom:10px}
+    li{font-weight:600}
+    .shop-now-btn{font-size:20px;font-weight:700;padding:18px 55px;border-radius:9999px}
   </style>
 </head>
+<body class="bg-white text-gray-800">
 
-<body>
-  <header>
-    <img class="logo" src="logo.png" alt="Miji Mystique Logo">
-    <div>MIJI MYSTIQUE: REVEAL YOUR SKIN'S TRUE RADIANCE</div>
+  <!-- Header -->
+  <header class="bg-gray-900 text-white p-4 flex items-center justify-center gap-4">
+    <img src="logo.png" alt="Miji Mystique Logo" class="w-10 h-10 rounded-full">
+    <h1 class="text-2xl font-bold">Miji Mystique – Product Collection</h1>
   </header>
 
-  <h1 style="text-align:center; margin-top:30px; font-size: 20px; padding: 0 10px;">
-    AHP8 Peptide + Niacinamide Serum
-  </h1>
+  <!-- Bestselling Serums -->
+  <section class="p-4" id="bestselling">
+    <h2 class="text-center text-2xl font-bold mb-6">Our Bestselling Serums</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
 
-  <p class="highlight-text">
-    Firm. Restore. Smooth. This powerhouse serum combines AHP8 peptides and Niacinamide to reduce expression lines, strengthen the skin barrier, and reveal visibly firmer skin.
-  </p>
+      <!-- Retinol -->
+      <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
+        <h3 class="text-xl font-bold mb-2 text-center">2% Retinol Vitamin A Face Serum</h3>
+        <div class="rating-stars">★★★★★ (237 reviews)</div>
+        <img src="2-min.jpg" alt="Retinol Serum" class="product-image rounded-lg mb-4" loading="lazy">
+        <ul class="list-disc ml-6 text-base mb-4">
+          <li>Boosts collagen and cell turnover</li>
+          <li>Reduces fine lines & wrinkles</li>
+          <li>Fades dark spots & pigmentation</li>
+          <li>Refines skin texture & pores</li>
+          <li>Hydrates & nourishes deeply</li>
+          <li>Improves firmness & elasticity</li>
+        </ul>
+        <div class="mt-auto pt-2 flex flex-col items-center gap-4">
+          <a href="https://www.amazon.in/dp/B0DVC7QM1L" class="shop-now-btn bg-[#FF9900] hover:bg-[#FF8C00] text-white">Unlock Glow on Amazon</a>
+          <a href="https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU" class="shop-now-btn bg-[#2874F0] hover:bg-[#1A5FD0] text-white">Get Glow on Flipkart</a>
+        </div>
+      </div>
 
-  <img class="product-img" src="5-min.jpg" alt="AHP8 Serum">
+      <!-- Glutathione -->
+      <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
+        <h3 class="text-xl font-bold mb-2 text-center">10% Glutathione Brightening Serum</h3>
+        <div class="rating-stars">★★★★★ (189 reviews)</div>
+        <img src="4-min.jpg" alt="Glutathione Serum" class="product-image rounded-lg mb-4" loading="lazy">
+        <ul class="list-disc ml-6 text-base mb-4">
+          <li>Brightens & evens out complexion</li>
+          <li>Reduces dark spots & pigmentation</li>
+          <li>Combats oxidative stress</li>
+          <li>Enhances natural glow</li>
+          <li>Hydrates dry skin deeply</li>
+        </ul>
+        <div class="mt-auto pt-2 flex flex-col items-center gap-4">
+          <a href="https://www.amazon.in/dp/B0DVC5KD7W" class="shop-now-btn bg-[#FF9900] hover:bg-[#FF8C00] text-white">Brighten Up on Amazon</a>
+          <a href="https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA" class="shop-now-btn bg-[#2874F0] hover:bg-[#1A5FD0] text-white">Glow Bright on Flipkart</a>
+        </div>
+      </div>
 
-  <div class="button-container">
-    <button class="shop-now-btn" onclick="trackAmazonAHP8()">Buy on Amazon</button>
-    <button class="shop-now-btn" onclick="trackFlipkartAHP8()">Buy on Flipkart</button>
-  </div>
+      <!-- Vitamin C -->
+      <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
+        <h3 class="text-xl font-bold mb-2 text-center">Advanced 20% Vitamin C Face Serum</h3>
+        <div class="rating-stars">★★★★★ (321 reviews)</div>
+        <img src="3-min.jpg" alt="Vitamin C Serum" class="product-image rounded-lg mb-4" loading="lazy">
+        <ul class="list-disc ml-6 text-base mb-4">
+          <li>Fades sun spots & pigmentation</li>
+          <li>Boosts collagen production</li>
+          <li>Enhances radiance & glow</li>
+          <li>Hydrates & plumps skin</li>
+          <li>Protects from free radical damage</li>
+        </ul>
+        <div class="mt-auto pt-2 flex flex-col items-center gap-4">
+          <a href="https://www.amazon.in/dp/B0DVC91MN3" class="shop-now-btn bg-[#FF9900] hover:bg-[#FF8C00] text-white">Radiate Glow on Amazon</a>
+          <a href="https://www.flipkart.com/miji-mystique-advanced-vitamin-c-20/p/itmddd9b16065fa0?pid=KMTH7JUMKS4RQTGW" class="shop-now-btn bg-[#2874F0] hover:bg-[#1A5FD0] text-white">Glow with Flipkart</a>
+        </div>
+      </div>
 
-  <div style="max-width: 800px; margin: 50px auto 20px; padding: 0 15px; font-size: 16px; line-height: 1.6; color: #333;">
-    <h2 style="text-align: center; color: #a67458; font-size: 22px;">Peptide Power for Firm, Smooth Skin</h2>
+      <!-- AHP8 -->
+      <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
+        <h3 class="text-xl font-bold mb-2 text-center">AHP8 Peptide + Niacinamide Face Serum</h3>
+        <div class="rating-stars">★★★★★ (175 reviews)</div>
+        <img src="5-min.jpg" alt="AHP8 Serum" class="product-image rounded-lg mb-4" loading="lazy">
+        <ul class="list-disc ml-6 text-base mb-4">
+          <li>Softens forehead & smile lines</li>
+          <li>Firms & lifts sagging skin</li>
+          <li>Improves elasticity & strength</li>
+          <li>Reduces redness & inflammation</li>
+          <li>Enhances skin barrier function</li>
+        </ul>
+        <div class="mt-auto pt=2 flex flex-col items-center gap-4">
+          <a href="https://www.amazon.in/dp/B0DVC5QRDK" class="shop-now-btn bg-[#FF9900] hover:bg-[#FF8C00] text-white">Firm Up on Amazon</a>
+          <a href="https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S" class="shop-now-btn bg-[#2874F0] hover:bg-[#1A5FD0] text-white">Firm Skin on Flipkart</a>
+        </div>
+      </div>
 
-    <p>
-      AHP8 + Niacinamide is your go-to formula to firm skin, reduce fine lines, and enhance hydration. This serum is specially developed to mimic the effects of Botox-like peptides while being safe for daily use.
-    </p>
+    </div>
+  </section>
 
-    <h3 style="color: #444; margin-top: 25px;">Why AHP8 + Niacinamide?</h3>
-    <p>
-      AHP8 is a skin-smoothing peptide that works on dynamic wrinkles and smile lines, while Niacinamide reduces inflammation, improves texture, and reinforces the skin barrier.
-    </p>
-    <p style="font-style: italic;">Popular search terms: peptide anti-aging serum, AHP8 peptide, niacinamide face serum, anti-wrinkle serum, skin firming serum.</p>
-
-    <h3 style="color: #444; margin-top: 25px;">Key Benefits:</h3>
-    <ul style="padding-left: 20px;">
-      <li><strong>Softens Expression Lines:</strong> Especially around forehead & eyes</li>
-      <li><strong>Improves Elasticity:</strong> Promotes firm, plump skin</li>
-      <li><strong>Reduces Inflammation:</strong> Calms sensitive & red skin</li>
-      <li><strong>Barrier Repair:</strong> Strengthens the skin’s natural defense</li>
+  <!-- Why Choose -->
+  <section class="bg-pink-50 p-8 mt-12">
+    <h2 class="text-center text-2xl font-bold mb-4">Why Choose Miji Mystique?</h2>
+    <ul class="list-disc max-w-2xl mx-auto text-gray-700 text-lg space-y-3">
+      <li>Formulated with proven, dermatologist-recommended ingredients</li>
+      <li>Gentle yet powerful solutions for all skin types</li>
+      <li>No harmful chemicals – Paraben Free, Sulphate Free</li>
+      <li>Visible results within 4-6 weeks of consistent use</li>
+      <li>Trusted by over 10,000+ happy customers</li>
     </ul>
+  </section>
 
-    <h3 style="color: #444; margin-top: 25px;">How to Use:</h3>
-    <p>
-      Apply 2–3 drops after cleansing and toning. Use twice daily for best results. Follow with moisturizer. Safe for sensitive and mature skin.
-    </p>
+  <!-- FAQs -->
+  <section class="p-8">
+    <h2 class="text-center text-2xl font-bold mb-6">FAQs</h2>
+    <div class="max-w-3xl mx-auto space-y-6">
+      <div><h3 class="font-semibold">How long does it take to see results?</h3><p>Most users notice visible improvements in 4-6 weeks of regular use.</p></div>
+      <div><h3 class="font-semibold">Is it suitable for sensitive skin?</h3><p>Yes! Our serums are formulated to be gentle yet effective for sensitive skin types.</p></div>
+      <div><h3 class="font-semibold">Are your products cruelty-free?</h3><p>Absolutely. We are proudly cruelty-free and do not test on animals.</p></div>
+      <div><h3 class="font-semibold">Can I use it under makeup?</h3><p>Yes, our lightweight formulas work perfectly under sunscreen and makeup.</p></div>
+    </div>
+  </section>
 
-    <p style="margin-top: 15px;">
-      Lightweight and fragrance-free, this serum works well under makeup or sunscreen.
-    </p>
+  <!-- Footer -->
+  <footer class="bg-pink-100 p-4 text-center text-sm mt-10">
+    THANK YOU FOR SHOPPING WITH US<br>C-Block, Sector 63, Noida | Ph: 01204108678 | Email: mijimystique@gmail.com
+  </footer>
 
-    <p style="font-weight: bold; color: #222; margin-top: 20px;">
-      Firm and restore with AHP8 Peptide + Niacinamide—your daily wrinkle-fighting companion.
-    </p>
+  <!-- Mobile Sticky CTA -->
+  <div class="fixed bottom-0 left-0 w-full bg-[#ff4500] text-white text-center py-3 md:hidden z-50">
+    ✨ Reveal Your Glow → <a href="#bestselling" class="underline">Shop Now</a>
   </div>
 
-  <footer style="background-color: #f0e6e1; text-align: center; padding: 20px; font-size: 14px; color: #555; margin-top: 40px;">
-    © 2025 <strong>Miji Mystique</strong>. All rights reserved.
-  </footer>
+  <!-- Click Handler + Delegation -->
+  <script>
+    function trackButtonClick(url) {
+      try { if(typeof fbq==='function'){fbq('track','ViewContent');fbq('track','InitiateCheckout');} } catch(e){}
+      try { if(typeof gtag==='function'){gtag('event','product_checkout',{send_to:'G-1K4S938EK4',currency:'INR',value:1,items:[{item_name:'Serum Purchase',item_category:'Serum',item_variant:url.includes('amazon')?'Amazon':'Flipkart'}],event_callback:function(){window.location=url;},event_timeout:2000});} } catch(e){}
+      setTimeout(function(){window.location=url;},2200);
+    }
+    document.addEventListener('DOMContentLoaded',function(){
+      document.querySelectorAll('a.shop-now-btn').forEach(function(el){
+        el.addEventListener('click',function(e){
+          e.preventDefault();trackButtonClick(el.href);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
