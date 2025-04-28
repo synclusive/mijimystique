@@ -25,41 +25,26 @@
 
   <!-- Facebook Pixel Base Code -->
   <script>
-    (function(){
-      try {
-        !function(f,b,e,v,n,t,s){
-          if(f.fbq) return;
-          n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq) f._fbq=n;
-          n.push=n; n.loaded=!0; n.version='2.0'; n.queue=[];
-          t=b.createElement(e); t.async=!0; t.src=v;
-          s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s);
-        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '630696149944730');
-        fbq('track', 'PageView');
-      } catch(err) { console.warn('Facebook Pixel failed to load', err); }
-    })();
+    (function(){try{
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init','630696149944730');fbq('track','PageView');
+    }catch(e){console.warn('FB Pixel error',e);}})();
   </script>
 
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K4S938EK4"></script>
   <script>
-    (function(){
-      try {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
-        window.gtag = gtag;
-        gtag('js', new Date());
-        gtag('config', 'G-1K4S938EK4', { debug_mode: true });
-      } catch(err) { console.warn('GA4 failed to load', err); }
-    })();
+    (function(){try{
+      window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;
+      gtag('js',new Date());gtag('config','G-1K4S938EK4',{debug_mode:true});
+    }catch(e){console.warn('GA4 error',e);}})();
   </script>
 
   <style>
-    img.product-image { width: 70%; margin: 0 auto; display: block; }
-    .rating-stars { text-align: center; color: #facc15; margin-bottom: 10px; }
-    li { font-weight: 600; }
-    .shop-now-btn { font-size: 20px; font-weight: 700; padding: 18px 55px; border-radius: 9999px; }
+    img.product-image{width:70%;margin:0 auto;display:block}
+    .rating-stars{text-align:center;color:#facc15;margin-bottom:10px}
+    li{font-weight:600}
+    .shop-now-btn{font-size:20px;font-weight:700;padding:18px 55px;border-radius:9999px}
   </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -75,9 +60,9 @@
     <h2 class="text-center text-2xl font-bold mb-6">Our Bestselling Serums</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
 
-      <!-- Retinol Serum Card -->
+      <!-- Retinol -->
       <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
-        <h2 class="text-xl font-bold mb-2 text-center">2% Retinol Vitamin A Face Serum</h2>
+        <h3 class="text-xl font-bold mb-2 text-center">2% Retinol Vitamin A Face Serum</h3>
         <div class="rating-stars">★★★★★ (237 reviews)</div>
         <img src="2-min.jpg" alt="Retinol Serum" class="product-image rounded-lg mb-4" loading="lazy">
         <ul class="list-disc ml-6 text-base mb-4">
@@ -89,14 +74,14 @@
           <li>Improves firmness & elasticity</li>
         </ul>
         <div class="mt-auto pt-2 flex flex-col items-center gap-4">
-          <a href="https://www.amazon.in/dp/B0DVC7QM1L" onclick="return trackButtonClick(this.href)" class="shop-now-btn bg-[#FF9900] hover:bg-[#FF8C00] text-white">Unlock Glow on Amazon</a>
-          <a href="https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU" onclick="return trackButtonClick(this.href)" class="shop-now-btn bg-[#2874F0] hover:bg-[#1A5FD0] text-white">Get Glow on Flipkart</a>
+          <a href="https://www.amazon.in/dp/B0DVC7QM1L" class="shop-now-btn bg-[#FF9900] hover:bg-[#FF8C00] text-white">Unlock Glow on Amazon</a>
+          <a href="https://www.flipkart.com/miji-mystique-retinol-02-vitamin/p/itmc104371406800?pid=KMTH7RZFM9YUZGHU" class="shop-now-btn bg-[#2874F0] hover:bg-[#1A5FD0] text-white">Get Glow on Flipkart</a>
         </div>
       </div>
 
-      <!-- Glutathione Serum Card -->
+      <!-- Glutathione -->
       <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
-        <h2 class="text-xl font-bold mb-2 text-center">10% Glutathione Brightening Serum</h2>
+        <h3 class="text-xl font-bold mb-2 text-center">10% Glutathione Brightening Serum</h3>
         <div class="rating-stars">★★★★★ (189 reviews)</div>
         <img src="4-min.jpg" alt="Glutathione Serum" class="product-image rounded-lg mb-4" loading="lazy">
         <ul class="list-disc ml-6 text-base mb-4">
@@ -107,51 +92,51 @@
           <li>Hydrates dry skin deeply</li>
         </ul>
         <div class="mt-auto pt-2 flex flex-col items-center gap-4">
-          <a href="https://www.amazon.in/dp/B0DVC5KD7W" onclick="return trackButtonClick(this.href)" class="shop-now-btn bg-[#FF9900] hover:bg-[#FF8C00] text-white">Brighten Up on Amazon</a>
-          <a href="https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA" onclick="return trackButtonClick(this.href)" class="shop-now-btn bg-[#2874F0] hover:bg-[#1A5FD0] text-white">Glow Bright on Flipkart</a>
+          <a href="https://www.amazon.in/dp/B0DVC5KD7W" class="shop-now-btn bg-[#FF9900] hover:bg-[#FF8C00] text-white">Brighten Up on Amazon</a>
+          <a href="https://www.flipkart.com/miji-mystique-glutathione-kojic-acid-alpha-arbutin-brightening-serum/p/itm533009dd2d405?pid=KMTH8HF6TSXVZPAA" class="shop-now-btn bg-[#2874F0] hover:bg-[#1A5FD0] text-white">Glow Bright on Flipkart</a>
         </div>
       </div>
 
-      <!-- Vitamin C Serum Card -->
+      <!-- Vitamin C -->
       <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
-        <h2 class="text-xl font-bold mb-2 text-center">Advanced 20% Vitamin C Face Serum</h2>
+        <h3 class="text-xl font-bold mb-2 text-center">Advanced 20% Vitamin C Face Serum</h3>
         <div class="rating-stars">★★★★★ (321 reviews)</div>
         <img src="3-min.jpg" alt="Vitamin C Serum" class="product-image rounded-lg mb-4" loading="lazy">
         <ul class="list-disc ml-6 text-base mb-4">
-          <li>Fades sun spots and pigmentation</li>
+          <li>Fades sun spots & pigmentation</li>
           <li>Boosts collagen production</li>
           <li>Enhances radiance & glow</li>
-          <li>Hydrates and plumps skin</li>
+          <li>Hydrates & plumps skin</li>
           <li>Protects from free radical damage</li>
         </ul>
         <div class="mt-auto pt-2 flex flex-col items-center gap-4">
-          <a href="https://www.amazon.in/dp/B0DVC91MN3" onclick="return trackButtonClick(this.href)" class="shop-now-btn bg-[#FF9900] hover:bg-[#FF8C00] text-white">Radiate Glow on Amazon</a>
-          <a href="https://www.flipkart.com/miji-mystique-advanced-vitamin-c-20/p/itmddd9b16065fa0?pid=KMTH7JUMKS4RQTGW" onclick="return trackButtonClick(this.href)" class="shop-now-btn bg-[#2874F0] hover:bg-[#1A5FD0] text-white">Glow with Flipkart</a>
+          <a href="https://www.amazon.in/dp/B0DVC91MN3" class="shop-now-btn bg-[#FF9900] hover:bg-[#FF8C00] text-white">Radiate Glow on Amazon</a>
+          <a href="https://www.flipkart.com/miji-mystique-advanced-vitamin-c-20/p/itmddd9b16065fa0?pid=KMTH7JUMKS4RQTGW" class="shop-now-btn bg-[#2874F0] hover:bg-[#1A5FD0] text-white">Glow with Flipkart</a>
         </div>
       </div>
 
-      <!-- AHP8 Serum Card -->
+      <!-- AHP8 -->
       <div class="border rounded-xl p-4 shadow hover:shadow-md transition flex flex-col">
-        <h2 class="text-xl font-bold mb-2 text-center">AHP8 Peptide + Niacinamide Face Serum</h2>
+        <h3 class="text-xl font-bold mb-2 text-center">AHP8 Peptide + Niacinamide Face Serum</h3>
         <div class="rating-stars">★★★★★ (175 reviews)</div>
         <img src="5-min.jpg" alt="AHP8 Serum" class="product-image rounded-lg mb-4" loading="lazy">
         <ul class="list-disc ml-6 text-base mb-4">
           <li>Softens forehead & smile lines</li>
-          <li>Firms and lifts sagging skin</li>
-          <li>Improves elasticity and strength</li>
+          <li>Firms & lifts sagging skin</li>
+          <li>Improves elasticity & strength</li>
           <li>Reduces redness & inflammation</li>
           <li>Enhances skin barrier function</li>
         </ul>
-        <div class="mt-auto pt-2 flex flex-col items-center gap-4">
-          <a href="https://www.amazon.in/dp/B0DVC5QRDK" onclick="return trackButtonClick(this.href)" class="shop-now-btn bg-[#FF9900] hover:bg-[#FF8C00] text-white">Firm Up on Amazon</a>
-          <a href="https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S" onclick="return trackButtonClick(this.href)" class="shop-now-btn bg-[#2874F0] hover:bg-[#1A5FD0] text-white">Firm Skin on Flipkart</a>
+        <div class="mt-auto pt=2 flex flex-col items-center gap-4">
+          <a href="https://www.amazon.in/dp/B0DVC5QRDK" class="shop-now-btn bg-[#FF9900] hover:bg-[#FF8C00] text-white">Firm Up on Amazon</a>
+          <a href="https://www.flipkart.com/miji-mystique-ahp-8-nacinamide/p/itm7e35547531f34?pid=KMTH7SKG7YENW46S" class="shop-now-btn bg-[#2874F0] hover:bg-[#1A5FD0] text-white">Firm Skin on Flipkart</a>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Why Choose Section -->
+  <!-- Why Choose -->
   <section class="bg-pink-50 p-8 mt-12">
     <h2 class="text-center text-2xl font-bold mb-4">Why Choose Miji Mystique?</h2>
     <ul class="list-disc max-w-2xl mx-auto text-gray-700 text-lg space-y-3">
@@ -163,33 +148,20 @@
     </ul>
   </section>
 
-  <!-- FAQs Section -->
+  <!-- FAQs -->
   <section class="p-8">
     <h2 class="text-center text-2xl font-bold mb-6">FAQs</h2>
     <div class="max-w-3xl mx-auto space-y-6">
-      <div>
-        <h3 class="font-semibold">How long does it take to see results?</h3>
-        <p>Most users notice visible improvements in 4-6 weeks of regular use.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold">Is it suitable for sensitive skin?</h3>
-        <p>Yes! Our serums are formulated to be gentle yet effective for sensitive skin types.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold">Are your products cruelty-free?</h3>
-        <p>Absolutely. We are proudly cruelty-free and do not test on animals.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold">Can I use it under makeup?</h3>
-        <p>Yes, our lightweight formulas work perfectly under sunscreen and makeup.</p>
-      </div>
+      <div><h3 class="font-semibold">How long does it take to see results?</h3><p>Most users notice visible improvements in 4-6 weeks of regular use.</p></div>
+      <div><h3 class="font-semibold">Is it suitable for sensitive skin?</h3><p>Yes! Our serums are formulated to be gentle yet effective for sensitive skin types.</p></div>
+      <div><h3 class="font-semibold">Are your products cruelty-free?</h3><p>Absolutely. We are proudly cruelty-free and do not test on animals.</p></div>
+      <div><h3 class="font-semibold">Can I use it under makeup?</h3><p>Yes, our lightweight formulas work perfectly under sunscreen and makeup.</p></div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-pink-100 p-4 text-center text-sm mt-10">
-    THANK YOU FOR SHOPPING WITH US<br>
-    C-Block, Sector 63, Noida | Ph: 01204108678 | Email: mijimystique@gmail.com
+    THANK YOU FOR SHOPPING WITH US<br>C-Block, Sector 63, Noida | Ph: 01204108678 | Email: mijimystique@gmail.com
   </footer>
 
   <!-- Mobile Sticky CTA -->
@@ -197,39 +169,20 @@
     ✨ Reveal Your Glow → <a href="#bestselling" class="underline">Shop Now</a>
   </div>
 
-  <!-- Click Handler -->
+  <!-- Click Handler + Delegation -->
   <script>
     function trackButtonClick(url) {
-      // Facebook tracking
-      try {
-        if (typeof fbq === 'function') {
-          fbq('track', 'ViewContent');
-          fbq('track', 'InitiateCheckout');
-        }
-      } catch(e) { console.warn('fbq error', e); }
-
-      // Google Analytics tracking
-      try {
-        if (typeof gtag === 'function') {
-          gtag('event', 'product_checkout', {
-            send_to: 'G-1K4S938EK4',
-            currency: 'INR',
-            value: 1,
-            items: [{
-              item_name: 'Serum Purchase',
-              item_category: 'Serum',
-              item_variant: url.includes('amazon') ? 'Amazon' : 'Flipkart'
-            }],
-            event_callback: function() { window.location = url; },
-            event_timeout: 2000
-          });
-        }
-      } catch(e) { console.warn('gtag error', e); }
-
-      // Fallback redirect
-      setTimeout(function() { window.location = url; }, 2200);
-      return false;
+      try { if(typeof fbq==='function'){fbq('track','ViewContent');fbq('track','InitiateCheckout');} } catch(e){}
+      try { if(typeof gtag==='function'){gtag('event','product_checkout',{send_to:'G-1K4S938EK4',currency:'INR',value:1,items:[{item_name:'Serum Purchase',item_category:'Serum',item_variant:url.includes('amazon')?'Amazon':'Flipkart'}],event_callback:function(){window.location=url;},event_timeout:2000});} } catch(e){}
+      setTimeout(function(){window.location=url;},2200);
     }
+    document.addEventListener('DOMContentLoaded',function(){
+      document.querySelectorAll('a.shop-now-btn').forEach(function(el){
+        el.addEventListener('click',function(e){
+          e.preventDefault();trackButtonClick(el.href);
+        });
+      });
+    });
   </script>
 </body>
 </html>
